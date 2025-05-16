@@ -1,0 +1,479 @@
+\doxysection{corewar.\+h File Reference}
+\hypertarget{corewar_8h}{}\label{corewar_8h}\index{corewar.h@{corewar.h}}
+
+
+Corewar virtual machine main header.  
+
+
+{\ttfamily \#include "{}op.\+h"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+Include dependency graph for corewar.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{corewar_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{corewar_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinstruction__t}{instruction\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Represents a VM instruction. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structchamp__t}{champ\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Represents a champion (player) in the arena. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structprocess__t}{process\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Represents a process executing in the VM. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Dynamic array for champions. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Dynamic array for processes. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Main VM state structure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{corewar_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}}~0
+\begin{DoxyCompactList}\small\item\em Program exit success code. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{corewar_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}}~84
+\begin{DoxyCompactList}\small\item\em Program exit failure code. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{corewar_8h_a9b7ec48a0589f95417026a9f645e5d8f}{DUMP\+\_\+\+SIZE}}~32
+\begin{DoxyCompactList}\small\item\em Number of bytes displayed per line in memory dump. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{corewar_8h_a44699cd8f50fed26939f0c1de0dad1f2}{DEFAULT\+\_\+\+DYNA\+\_\+\+SIZE}}~8
+\begin{DoxyCompactList}\small\item\em Default size for dynamic arrays. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}} (int const ac, char const \texorpdfstring{$\ast$}{*}const av\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main Corewar execution function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{corewar_8h_af3bfc524640f5f1d7d84db9aa557ebea}{destroy\+\_\+champ}} (\mbox{\hyperlink{structchamp__t}{champ\+\_\+t}} \texorpdfstring{$\ast$}{*}champ)
+\begin{DoxyCompactList}\small\item\em Frees a champion structure. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{corewar_8h_ae9d8670d96b67593255f30d83936dba2}{destroy\+\_\+corewar}} (\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Frees the entire VM state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{corewar_8h_a331af58cc38a920068317776377c152c}{destroy\+\_\+process}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process)
+\begin{DoxyCompactList}\small\item\em Frees a process structure. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a03db63d91fde7e889a46bd14ba79dba8}{dump}} (\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Dumps the arena memory to stdout. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a7ed42ca26bf1e5c9aa5d48c282f87e02}{get\+\_\+champ\+\_\+index}} (int id, \mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}champs)
+\begin{DoxyCompactList}\small\item\em Gets champion index by ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a58364bf2a02c897f350ef73fff7d45e3}{get\+\_\+value}} (bool is\+\_\+dir, int i, int pc, unsigned char \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Gets a value from arena memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a333d32d5ad9ac18f6d1f785045be65b2}{get\+\_\+value\+\_\+mod}} (bool is\+\_\+dir, int i, int pc, unsigned char \texorpdfstring{$\ast$}{*}arena)
+\begin{DoxyCompactList}\small\item\em Gets a value from arena memory with modulo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{corewar_8h_a7aa34bafbb0cba6c111c8a16c60b9dd7}{parser}} (int const ac, char const \texorpdfstring{$\ast$}{*}const av\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Parses command line arguments into VM state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_ad0cf26ddf653f448adde4681ed1124b3}{sort\+\_\+champs\+\_\+by\+\_\+id}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}champs, int lr\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Sorts champions by ID. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a40a07ae1ec63a796de1fecbe612859be}{add\+\_\+elt\+\_\+to\+\_\+champ\+\_\+array}} (\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{structchamp__t}{champ\+\_\+t}} \texorpdfstring{$\ast$}{*}element)
+\begin{DoxyCompactList}\small\item\em Adds element to champion array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{corewar_8h_a42451bc8bd204ad30e1b6ccaaa8f79aa}{free\+\_\+champ\+\_\+array}} (\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}array, bool free\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Frees champion array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{corewar_8h_a324e4f6593ef5cda56a3930290753339}{init\+\_\+champ\+\_\+array}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes champion array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_a376a11876974c4d6dd27ec53483e1ecb}{remove\+\_\+elt\+\_\+from\+\_\+champ\+\_\+array}} (\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}array, int index)
+\begin{DoxyCompactList}\small\item\em Removes element from champion array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{corewar_8h_aebf2c0005c73b7508d7117e0bfc440c3}{add\+\_\+elt\+\_\+to\+\_\+process\+\_\+array}} (\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}array, \mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}element)
+\begin{DoxyCompactList}\small\item\em Adds element to process array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{corewar_8h_ae808097995929bfcefeababe33d22e59}{free\+\_\+process\+\_\+array}} (\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}array, bool free\+\_\+array)
+\begin{DoxyCompactList}\small\item\em Frees process array. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{corewar_8h_a36c46c8c489e423508319a4ab9a81d98}{init\+\_\+process\+\_\+array}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes process array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Corewar virtual machine main header. 
+
+Contains all structures and function prototypes for the Corewar project
+
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{corewar_8h_a44699cd8f50fed26939f0c1de0dad1f2}\index{corewar.h@{corewar.h}!DEFAULT\_DYNA\_SIZE@{DEFAULT\_DYNA\_SIZE}}
+\index{DEFAULT\_DYNA\_SIZE@{DEFAULT\_DYNA\_SIZE}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DYNA\_SIZE}{DEFAULT\_DYNA\_SIZE}}
+{\footnotesize\ttfamily \label{corewar_8h_a44699cd8f50fed26939f0c1de0dad1f2} 
+\#define DEFAULT\+\_\+\+DYNA\+\_\+\+SIZE~8}
+
+
+
+Default size for dynamic arrays. 
+
+\Hypertarget{corewar_8h_a9b7ec48a0589f95417026a9f645e5d8f}\index{corewar.h@{corewar.h}!DUMP\_SIZE@{DUMP\_SIZE}}
+\index{DUMP\_SIZE@{DUMP\_SIZE}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{DUMP\_SIZE}{DUMP\_SIZE}}
+{\footnotesize\ttfamily \label{corewar_8h_a9b7ec48a0589f95417026a9f645e5d8f} 
+\#define DUMP\+\_\+\+SIZE~32}
+
+
+
+Number of bytes displayed per line in memory dump. 
+
+\Hypertarget{corewar_8h_a6d58f9ac447476b4e084d7ca383f5183}\index{corewar.h@{corewar.h}!FAILURE@{FAILURE}}
+\index{FAILURE@{FAILURE}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{FAILURE}{FAILURE}}
+{\footnotesize\ttfamily \label{corewar_8h_a6d58f9ac447476b4e084d7ca383f5183} 
+\#define FAILURE~84}
+
+
+
+Program exit failure code. 
+
+\Hypertarget{corewar_8h_aa90cac659d18e8ef6294c7ae337f6b58}\index{corewar.h@{corewar.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \label{corewar_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
+\#define SUCCESS~0}
+
+
+
+Program exit success code. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{corewar_8h_a40a07ae1ec63a796de1fecbe612859be}\index{corewar.h@{corewar.h}!add\_elt\_to\_champ\_array@{add\_elt\_to\_champ\_array}}
+\index{add\_elt\_to\_champ\_array@{add\_elt\_to\_champ\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{add\_elt\_to\_champ\_array()}{add\_elt\_to\_champ\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_a40a07ae1ec63a796de1fecbe612859be} 
+int add\+\_\+elt\+\_\+to\+\_\+champ\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{structchamp__t}{champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
+
+
+
+Adds element to champion array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Target array \\
+\hline
+{\em element} & Element to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_aebf2c0005c73b7508d7117e0bfc440c3}\index{corewar.h@{corewar.h}!add\_elt\_to\_process\_array@{add\_elt\_to\_process\_array}}
+\index{add\_elt\_to\_process\_array@{add\_elt\_to\_process\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{add\_elt\_to\_process\_array()}{add\_elt\_to\_process\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_aebf2c0005c73b7508d7117e0bfc440c3} 
+int add\+\_\+elt\+\_\+to\+\_\+process\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{element}{}\end{DoxyParamCaption})}
+
+
+
+Adds element to process array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Target array \\
+\hline
+{\em element} & Element to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a09be1914520c3de0c22220a9f35e107f}\index{corewar.h@{corewar.h}!corewar@{corewar}}
+\index{corewar@{corewar}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{corewar()}{corewar()}}
+{\footnotesize\ttfamily \label{corewar_8h_a09be1914520c3de0c22220a9f35e107f} 
+int corewar (\begin{DoxyParamCaption}\item[{int const}]{ac}{, }\item[{char const \texorpdfstring{$\ast$}{*}const}]{av}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Main Corewar execution function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Argument count \\
+\hline
+{\em av} & Argument vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{corewar_8h_a09be1914520c3de0c22220a9f35e107f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{corewar_8h_af3bfc524640f5f1d7d84db9aa557ebea}\index{corewar.h@{corewar.h}!destroy\_champ@{destroy\_champ}}
+\index{destroy\_champ@{destroy\_champ}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_champ()}{destroy\_champ()}}
+{\footnotesize\ttfamily \label{corewar_8h_af3bfc524640f5f1d7d84db9aa557ebea} 
+void destroy\+\_\+champ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structchamp__t}{champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{champ}{}\end{DoxyParamCaption})}
+
+
+
+Frees a champion structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champ} & Champion to free \\
+\hline
+\end{DoxyParams}
+\Hypertarget{corewar_8h_ae9d8670d96b67593255f30d83936dba2}\index{corewar.h@{corewar.h}!destroy\_corewar@{destroy\_corewar}}
+\index{destroy\_corewar@{destroy\_corewar}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_corewar()}{destroy\_corewar()}}
+{\footnotesize\ttfamily \label{corewar_8h_ae9d8670d96b67593255f30d83936dba2} 
+void destroy\+\_\+corewar (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Frees the entire VM state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em corewar} & VM state to free \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{corewar_8h_ae9d8670d96b67593255f30d83936dba2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{corewar_8h_a331af58cc38a920068317776377c152c}\index{corewar.h@{corewar.h}!destroy\_process@{destroy\_process}}
+\index{destroy\_process@{destroy\_process}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_process()}{destroy\_process()}}
+{\footnotesize\ttfamily \label{corewar_8h_a331af58cc38a920068317776377c152c} 
+void destroy\+\_\+process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{}\end{DoxyParamCaption})}
+
+
+
+Frees a process structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & Process to free \\
+\hline
+\end{DoxyParams}
+\Hypertarget{corewar_8h_a03db63d91fde7e889a46bd14ba79dba8}\index{corewar.h@{corewar.h}!dump@{dump}}
+\index{dump@{dump}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily \label{corewar_8h_a03db63d91fde7e889a46bd14ba79dba8} 
+int dump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Dumps the arena memory to stdout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em corewar} & VM state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{corewar_8h_a03db63d91fde7e889a46bd14ba79dba8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{corewar_8h_a42451bc8bd204ad30e1b6ccaaa8f79aa}\index{corewar.h@{corewar.h}!free\_champ\_array@{free\_champ\_array}}
+\index{free\_champ\_array@{free\_champ\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{free\_champ\_array()}{free\_champ\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_a42451bc8bd204ad30e1b6ccaaa8f79aa} 
+void free\+\_\+champ\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{bool}]{free\+\_\+array}{}\end{DoxyParamCaption})}
+
+
+
+Frees champion array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array to free \\
+\hline
+{\em free\+\_\+array} & Whether to free the array itself \\
+\hline
+\end{DoxyParams}
+\Hypertarget{corewar_8h_ae808097995929bfcefeababe33d22e59}\index{corewar.h@{corewar.h}!free\_process\_array@{free\_process\_array}}
+\index{free\_process\_array@{free\_process\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{free\_process\_array()}{free\_process\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_ae808097995929bfcefeababe33d22e59} 
+void free\+\_\+process\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{bool}]{free\+\_\+array}{}\end{DoxyParamCaption})}
+
+
+
+Frees process array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Array to free \\
+\hline
+{\em free\+\_\+array} & Whether to free the array itself \\
+\hline
+\end{DoxyParams}
+\Hypertarget{corewar_8h_a7ed42ca26bf1e5c9aa5d48c282f87e02}\index{corewar.h@{corewar.h}!get\_champ\_index@{get\_champ\_index}}
+\index{get\_champ\_index@{get\_champ\_index}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{get\_champ\_index()}{get\_champ\_index()}}
+{\footnotesize\ttfamily \label{corewar_8h_a7ed42ca26bf1e5c9aa5d48c282f87e02} 
+int get\+\_\+champ\+\_\+index (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{champs}{}\end{DoxyParamCaption})}
+
+
+
+Gets champion index by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Champion ID to find \\
+\hline
+{\em champs} & Champion array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Index or -\/1 if not found 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a58364bf2a02c897f350ef73fff7d45e3}\index{corewar.h@{corewar.h}!get\_value@{get\_value}}
+\index{get\_value@{get\_value}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{get\_value()}{get\_value()}}
+{\footnotesize\ttfamily \label{corewar_8h_a58364bf2a02c897f350ef73fff7d45e3} 
+int get\+\_\+value (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+dir}{, }\item[{int}]{i}{, }\item[{int}]{pc}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{arena}{}\end{DoxyParamCaption})}
+
+
+
+Gets a value from arena memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+dir} & Whether to treat as direct value \\
+\hline
+{\em i} & Size to read \\
+\hline
+{\em pc} & Current program counter \\
+\hline
+{\em arena} & Memory arena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The read value 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a333d32d5ad9ac18f6d1f785045be65b2}\index{corewar.h@{corewar.h}!get\_value\_mod@{get\_value\_mod}}
+\index{get\_value\_mod@{get\_value\_mod}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{get\_value\_mod()}{get\_value\_mod()}}
+{\footnotesize\ttfamily \label{corewar_8h_a333d32d5ad9ac18f6d1f785045be65b2} 
+int get\+\_\+value\+\_\+mod (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+dir}{, }\item[{int}]{i}{, }\item[{int}]{pc}{, }\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{arena}{}\end{DoxyParamCaption})}
+
+
+
+Gets a value from arena memory with modulo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+dir} & Whether to treat as direct value \\
+\hline
+{\em i} & Size to read \\
+\hline
+{\em pc} & Current program counter \\
+\hline
+{\em arena} & Memory arena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The read value (mod MEM\+\_\+\+SIZE) 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a324e4f6593ef5cda56a3930290753339}\index{corewar.h@{corewar.h}!init\_champ\_array@{init\_champ\_array}}
+\index{init\_champ\_array@{init\_champ\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{init\_champ\_array()}{init\_champ\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_a324e4f6593ef5cda56a3930290753339} 
+\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*} init\+\_\+champ\+\_\+array (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes champion array. 
+
+\begin{DoxyReturn}{Returns}
+dyna\+\_\+champ\+\_\+t\texorpdfstring{$\ast$}{*} New array 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a36c46c8c489e423508319a4ab9a81d98}\index{corewar.h@{corewar.h}!init\_process\_array@{init\_process\_array}}
+\index{init\_process\_array@{init\_process\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{init\_process\_array()}{init\_process\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_a36c46c8c489e423508319a4ab9a81d98} 
+\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*} init\+\_\+process\+\_\+array (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes process array. 
+
+\begin{DoxyReturn}{Returns}
+dyna\+\_\+process\+\_\+t\texorpdfstring{$\ast$}{*} New array 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a7aa34bafbb0cba6c111c8a16c60b9dd7}\index{corewar.h@{corewar.h}!parser@{parser}}
+\index{parser@{parser}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{parser()}{parser()}}
+{\footnotesize\ttfamily \label{corewar_8h_a7aa34bafbb0cba6c111c8a16c60b9dd7} 
+\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*} parser (\begin{DoxyParamCaption}\item[{int const}]{ac}{, }\item[{char const \texorpdfstring{$\ast$}{*}const}]{av}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Parses command line arguments into VM state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ac} & Argument count \\
+\hline
+{\em av} & Argument vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+corewar\+\_\+t\texorpdfstring{$\ast$}{*} Initialized VM state 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_a376a11876974c4d6dd27ec53483e1ecb}\index{corewar.h@{corewar.h}!remove\_elt\_from\_champ\_array@{remove\_elt\_from\_champ\_array}}
+\index{remove\_elt\_from\_champ\_array@{remove\_elt\_from\_champ\_array}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{remove\_elt\_from\_champ\_array()}{remove\_elt\_from\_champ\_array()}}
+{\footnotesize\ttfamily \label{corewar_8h_a376a11876974c4d6dd27ec53483e1ecb} 
+int remove\+\_\+elt\+\_\+from\+\_\+champ\+\_\+array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__champ__t}{dyna\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{array}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+Removes element from champion array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em array} & Target array \\
+\hline
+{\em index} & Index to remove \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}
+\Hypertarget{corewar_8h_ad0cf26ddf653f448adde4681ed1124b3}\index{corewar.h@{corewar.h}!sort\_champs\_by\_id@{sort\_champs\_by\_id}}
+\index{sort\_champs\_by\_id@{sort\_champs\_by\_id}!corewar.h@{corewar.h}}
+\doxysubsubsection{\texorpdfstring{sort\_champs\_by\_id()}{sort\_champs\_by\_id()}}
+{\footnotesize\ttfamily \label{corewar_8h_ad0cf26ddf653f448adde4681ed1124b3} 
+int sort\+\_\+champs\+\_\+by\+\_\+id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{champs}{, }\item[{int}]{lr}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Sorts champions by ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em champs} & Champion array \\
+\hline
+{\em lr} & Left/right indices for sorting \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int SUCCESS or FAILURE 
+\end{DoxyReturn}

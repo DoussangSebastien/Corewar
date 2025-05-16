@@ -1,0 +1,45 @@
+\doxysection{opcode\+\_\+t Struct Reference}
+\hypertarget{structopcode__t}{}\label{structopcode__t}\index{opcode\_t@{opcode\_t}}
+
+
+Associates an opcode with its corresponding execution function.  
+
+
+
+
+{\ttfamily \#include $<$opcode.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int const \mbox{\hyperlink{structopcode__t_aef9013f220ed03d1791d20923bb6837d}{opcode}}
+\item 
+int(\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structopcode__t_aa6719de3b3012cbb0156d71ddaf7c4b5}{func}} )(\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Associates an opcode with its corresponding execution function. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structopcode__t_aa6719de3b3012cbb0156d71ddaf7c4b5}\index{opcode\_t@{opcode\_t}!func@{func}}
+\index{func@{func}!opcode\_t@{opcode\_t}}
+\doxysubsubsection{\texorpdfstring{func}{func}}
+{\footnotesize\ttfamily \label{structopcode__t_aa6719de3b3012cbb0156d71ddaf7c4b5} 
+int(\texorpdfstring{$\ast$}{*} opcode\+\_\+t\+::func) (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*})}
+
+Instruction execution function.
+
+Function pointer to the instruction\textquotesingle{}s implementation. \Hypertarget{structopcode__t_aef9013f220ed03d1791d20923bb6837d}\index{opcode\_t@{opcode\_t}!opcode@{opcode}}
+\index{opcode@{opcode}!opcode\_t@{opcode\_t}}
+\doxysubsubsection{\texorpdfstring{opcode}{opcode}}
+{\footnotesize\ttfamily \label{structopcode__t_aef9013f220ed03d1791d20923bb6837d} 
+int const opcode\+\_\+t\+::opcode}
+
+Opcode numeric value.
+
+The numeric opcode (e.\+g., 0x01 for {\ttfamily live}). 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{opcode_8h}{opcode.\+h}}\end{DoxyCompactItemize}

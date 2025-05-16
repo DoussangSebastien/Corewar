@@ -1,0 +1,217 @@
+\doxysection{my.\+h File Reference}
+\hypertarget{my_8h}{}\label{my_8h}\index{my.h@{my.h}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{my_8h_a43cf05cfe7690bfab3a63a8b24fd88f5}{hex\+\_\+to\+\_\+uint}} (unsigned char \texorpdfstring{$\ast$}{*}str, int index, int len)
+\begin{DoxyCompactList}\small\item\em Converts a hexadecimal string to an unsigned integer. \end{DoxyCompactList}\item 
+unsigned short \mbox{\hyperlink{my_8h_af31e0b5e6aacf65dcc1e5028b8301fc2}{hex\+\_\+to\+\_\+ushort}} (unsigned char \texorpdfstring{$\ast$}{*}str, int index, int len)
+\begin{DoxyCompactList}\small\item\em Converts a hexadecimal string to an unsigned short. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{my_8h_ad4f9e58ccd755707563a0e84100c2340}{my\+\_\+atoi}} (char const \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Converts a string to an integer (similar to atoi). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{my_8h_a80fc857d54c93d7805a5458d731caf6e}{my\+\_\+is\+\_\+digit}} (char const c)
+\begin{DoxyCompactList}\small\item\em Checks if a character is a digit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{my_8h_acd5021cc38d965be8f26a9ae465f06fa}{my\+\_\+itoa}} (int nb, char \texorpdfstring{$\ast$}{*}buffer)
+\begin{DoxyCompactList}\small\item\em Converts an integer to a string. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{my_8h_af336a60e0fd5a6ab40a9a5030fe8cb05}{my\+\_\+revstr}} (char \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Reverses a string in place. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{my_8h_a5e411f7f2abdd1a80958c9128405c7de}{my\+\_\+str\+\_\+isnum}} (char const \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Checks if a string consists only of digits. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{my_8h_a12d4044e7c0ab78ca1f186e0abdb08c6}{my\+\_\+strcmp}} (char const \texorpdfstring{$\ast$}{*}s1, char const \texorpdfstring{$\ast$}{*}s2)
+\begin{DoxyCompactList}\small\item\em Compares two strings. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{my_8h_a25005ac65f9b3740adfc9b4d6777afae}{my\+\_\+strdup}} (char const \texorpdfstring{$\ast$}{*}src)
+\begin{DoxyCompactList}\small\item\em Duplicates a string (allocates memory). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{my_8h_a3b3960588932459570799afa357e32b5}{my\+\_\+strlen}} (char const \texorpdfstring{$\ast$}{*}str)
+\begin{DoxyCompactList}\small\item\em Computes the length of a string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{my_8h_a43cf05cfe7690bfab3a63a8b24fd88f5}\index{my.h@{my.h}!hex\_to\_uint@{hex\_to\_uint}}
+\index{hex\_to\_uint@{hex\_to\_uint}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{hex\_to\_uint()}{hex\_to\_uint()}}
+{\footnotesize\ttfamily \label{my_8h_a43cf05cfe7690bfab3a63a8b24fd88f5} 
+unsigned hex\+\_\+to\+\_\+uint (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{int}]{index}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Converts a hexadecimal string to an unsigned integer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The hexadecimal string to convert. \\
+\hline
+{\em index} & The starting index in the string. \\
+\hline
+{\em len} & The length of the substring to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned The converted unsigned integer. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_af31e0b5e6aacf65dcc1e5028b8301fc2}\index{my.h@{my.h}!hex\_to\_ushort@{hex\_to\_ushort}}
+\index{hex\_to\_ushort@{hex\_to\_ushort}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{hex\_to\_ushort()}{hex\_to\_ushort()}}
+{\footnotesize\ttfamily \label{my_8h_af31e0b5e6aacf65dcc1e5028b8301fc2} 
+unsigned short hex\+\_\+to\+\_\+ushort (\begin{DoxyParamCaption}\item[{unsigned char \texorpdfstring{$\ast$}{*}}]{str}{, }\item[{int}]{index}{, }\item[{int}]{len}{}\end{DoxyParamCaption})}
+
+
+
+Converts a hexadecimal string to an unsigned short. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The hexadecimal string to convert. \\
+\hline
+{\em index} & The starting index in the string. \\
+\hline
+{\em len} & The length of the substring to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+unsigned short The converted unsigned short. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_ad4f9e58ccd755707563a0e84100c2340}\index{my.h@{my.h}!my\_atoi@{my\_atoi}}
+\index{my\_atoi@{my\_atoi}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_atoi()}{my\_atoi()}}
+{\footnotesize\ttfamily \label{my_8h_ad4f9e58ccd755707563a0e84100c2340} 
+int my\+\_\+atoi (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Converts a string to an integer (similar to atoi). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The converted integer. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_a80fc857d54c93d7805a5458d731caf6e}\index{my.h@{my.h}!my\_is\_digit@{my\_is\_digit}}
+\index{my\_is\_digit@{my\_is\_digit}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_is\_digit()}{my\_is\_digit()}}
+{\footnotesize\ttfamily \label{my_8h_a80fc857d54c93d7805a5458d731caf6e} 
+int my\+\_\+is\+\_\+digit (\begin{DoxyParamCaption}\item[{char const}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a character is a digit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The character to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 if the character is a digit, 0 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_acd5021cc38d965be8f26a9ae465f06fa}\index{my.h@{my.h}!my\_itoa@{my\_itoa}}
+\index{my\_itoa@{my\_itoa}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_itoa()}{my\_itoa()}}
+{\footnotesize\ttfamily \label{my_8h_acd5021cc38d965be8f26a9ae465f06fa} 
+void my\+\_\+itoa (\begin{DoxyParamCaption}\item[{int}]{nb}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Converts an integer to a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nb} & The integer to convert. \\
+\hline
+{\em buffer} & The buffer where the resulting string will be stored. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{my_8h_af336a60e0fd5a6ab40a9a5030fe8cb05}\index{my.h@{my.h}!my\_revstr@{my\_revstr}}
+\index{my\_revstr@{my\_revstr}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_revstr()}{my\_revstr()}}
+{\footnotesize\ttfamily \label{my_8h_af336a60e0fd5a6ab40a9a5030fe8cb05} 
+char \texorpdfstring{$\ast$}{*} my\+\_\+revstr (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Reverses a string in place. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to reverse. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} A pointer to the reversed string. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_a5e411f7f2abdd1a80958c9128405c7de}\index{my.h@{my.h}!my\_str\_isnum@{my\_str\_isnum}}
+\index{my\_str\_isnum@{my\_str\_isnum}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_str\_isnum()}{my\_str\_isnum()}}
+{\footnotesize\ttfamily \label{my_8h_a5e411f7f2abdd1a80958c9128405c7de} 
+int my\+\_\+str\+\_\+isnum (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a string consists only of digits. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 1 if the string is numeric, 0 otherwise. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_a12d4044e7c0ab78ca1f186e0abdb08c6}\index{my.h@{my.h}!my\_strcmp@{my\_strcmp}}
+\index{my\_strcmp@{my\_strcmp}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_strcmp()}{my\_strcmp()}}
+{\footnotesize\ttfamily \label{my_8h_a12d4044e7c0ab78ca1f186e0abdb08c6} 
+int my\+\_\+strcmp (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{s1}{, }\item[{char const \texorpdfstring{$\ast$}{*}}]{s2}{}\end{DoxyParamCaption})}
+
+
+
+Compares two strings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s1} & The first string to compare. \\
+\hline
+{\em s2} & The second string to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 0 if the strings are equal, a negative value if s1 \texorpdfstring{$<$}{<} s2, or a positive value if s1 \texorpdfstring{$>$}{>} s2. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_a25005ac65f9b3740adfc9b4d6777afae}\index{my.h@{my.h}!my\_strdup@{my\_strdup}}
+\index{my\_strdup@{my\_strdup}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_strdup()}{my\_strdup()}}
+{\footnotesize\ttfamily \label{my_8h_a25005ac65f9b3740adfc9b4d6777afae} 
+char \texorpdfstring{$\ast$}{*} my\+\_\+strdup (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{src}{}\end{DoxyParamCaption})}
+
+
+
+Duplicates a string (allocates memory). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em src} & The string to duplicate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} A pointer to the newly allocated string copy. 
+\end{DoxyReturn}
+\Hypertarget{my_8h_a3b3960588932459570799afa357e32b5}\index{my.h@{my.h}!my\_strlen@{my\_strlen}}
+\index{my\_strlen@{my\_strlen}!my.h@{my.h}}
+\doxysubsubsection{\texorpdfstring{my\_strlen()}{my\_strlen()}}
+{\footnotesize\ttfamily \label{my_8h_a3b3960588932459570799afa357e32b5} 
+int my\+\_\+strlen (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{str}{}\end{DoxyParamCaption})}
+
+
+
+Computes the length of a string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & The string to measure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int The length of the string. 
+\end{DoxyReturn}

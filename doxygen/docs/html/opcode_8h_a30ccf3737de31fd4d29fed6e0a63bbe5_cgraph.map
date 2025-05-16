@@ -1,0 +1,5 @@
+<map id="sub" name="sub">
+<area shape="rect" id="Node000001" title="sub instruction: Subtracts two registers and stores the result." alt="" coords="5,5,49,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="97,5,167,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="49,18,81,18,81,23,49,23"/>
+</map>

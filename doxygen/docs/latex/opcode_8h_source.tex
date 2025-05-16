@@ -1,0 +1,58 @@
+\doxysection{opcode.\+h}
+\hypertarget{opcode_8h_source}{}\label{opcode_8h_source}\index{opcode.h@{opcode.h}}
+\mbox{\hyperlink{opcode_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ OPCODE\_H\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ OPCODE\_H\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{corewar_8h}{corewar.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#define\ LIVE\_SIZE\ 5}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structopcode__t_aef9013f220ed03d1791d20923bb6837d}{opcode}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ int\ (*\mbox{\hyperlink{structopcode__t_aa6719de3b3012cbb0156d71ddaf7c4b5}{func}})(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *);\ }
+\DoxyCodeLine{00031\ \}\ \mbox{\hyperlink{structopcode__t}{opcode\_t}};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structopcode__t}{opcode\_t}}\ \mbox{\hyperlink{opcode_8h_a57a718178c2ba474ba2dd54fe27f09d8}{opcode}}[];}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{comment}{/*\ Instruction\ Functions\ */}}
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a6fc2595883b3a45c884896993db0c0c2}{add}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_aee2b62362821bb4d57a22fb129f6bbd6}{aff}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_add914ec247ec654ec69fb107d0c7ddf2}{and\_command}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_ab1a929d2351e4b080196d84858a662b0}{my\_fork}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00064\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_aaf5b24f7f8cb1e4064b68922f5b44b3f}{lfork}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a3e0b8b5aaec6c3245ffc06d84c30f593}{ldi}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a58dcd16516cb3bf3cbb4411d215e5a34}{lldi}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a072d20dcb42e9749c0156cccee1c019f}{live}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_ad387c548fb117c1f47fe66eeacefaad0}{lload}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00089\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a64ec47a879f2e55d70b53ec7182be7fa}{load}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00094\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_ae76d6f595475e6e37c8cbb4d5d2225dd}{or\_command}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a1cd7d8e1901b4be666067fddafa436a5}{store}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_acd0a6997d0241cfb4cf189905ba5d1a2}{store\_i}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00109\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a30ccf3737de31fd4d29fed6e0a63bbe5}{sub}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00114\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_a99fa7e954bc213357dd6aa4940bd6718}{xor\_command}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00119\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{opcode_8h_ab96f56197d82838e3e27a400a812e591}{zjump}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00127\ \mbox{\hyperlink{structprocess__t}{process\_t}}\ *\mbox{\hyperlink{opcode_8h_a5aa7d0a9b544e700e31bf8c5a41c5242}{dup\_process}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ *process,\ \textcolor{keywordtype}{short}\ param);}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ OPCODE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

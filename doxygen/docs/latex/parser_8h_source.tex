@@ -1,0 +1,53 @@
+\doxysection{parser.\+h}
+\hypertarget{parser_8h_source}{}\label{parser_8h_source}\index{parser.h@{parser.h}}
+\mbox{\hyperlink{parser_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#ifndef\ PARSER\_H\_}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ PARSER\_H\_}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{corewar_8h}{corewar.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structfree__area__t_a6678d3f644677d52940d192bcd52c9ce}{start}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structfree__area__t_a4ded31d9125e220c6f0fe678d0f92804}{size}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{structdyna__process__t}{dyna\_process\_t}}\ *\mbox{\hyperlink{structfree__area__t_ad05452ee804fed2e51a7bb6c05b0b1d2}{champs}};\ }
+\DoxyCodeLine{00022\ \}\ \mbox{\hyperlink{structfree__area__t}{free\_area\_t}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structnew__champ__t_ab8821b294576407e382cd233c7039d69}{ac}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structnew__champ__t_aca3c22d53d7e9e9d5fef463f1ed32cb1}{a}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structnew__champ__t_ab6081f3d2bd174765271f8b2ac8c9461}{n}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{structnew__champ__t}{new\_champ\_t}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ Memory\ management\ functions\ */}}
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_a502909699139bcf6dadb49798ce5aa1f}{check\_collisions}}(\mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{parser_8h_adea5c2c173c4d13c429459ba8d71f845}{free\_free\_areas}}(\mbox{\hyperlink{structfree__area__t}{free\_area\_t}}\ *free\_areas,\ \textcolor{keywordtype}{int}\ nb\_free\_areas);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{parser_8h_ab988a3140b0e5e0384b0c69baf936058}{get\_default\_corewar}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_acfb3e9550922a5e752712c53ab6f434d}{get\_total\_size}}(\mbox{\hyperlink{structdyna__process__t}{dyna\_process\_t}}\ *process);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_a00c2ba1e06b4f2ddedf90d013aa569bd}{multiple\_free\_areas}}(\mbox{\hyperlink{structfree__area__t}{free\_area\_t}}\ *free\_areas,\ \textcolor{keywordtype}{int}\ nb\_free\_areas,}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_ae09715a196ea5219374dc22459d3da3a}{one\_free\_area}}(\textcolor{keywordtype}{int}\ total\_size,\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{comment}{/*\ Champion\ loading\ functions\ */}}
+\DoxyCodeLine{00088\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_a5cbf9cd6a4a34567206c50a3c417a628}{parse\_file}}(\textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *filepath,\ \mbox{\hyperlink{structnew__champ__t}{new\_champ\_t}}\ *\textcolor{keyword}{new},\ \mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_a9393e0ab005767018939c8229af22117}{set\_champs\_pc}}(\mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \textcolor{comment}{/*\ Sorting\ functions\ */}}
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_ad73f96ac94c5e9ceece8786f81439f93}{sort\_free\_areas}}(\mbox{\hyperlink{structfree__area__t}{free\_area\_t}}\ *free\_areas,\ \textcolor{keywordtype}{int}\ lr[]);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_afce9b99f75976c62134bb97fec8da498}{sort\_unset\_champs}}(\mbox{\hyperlink{structprocess__t}{process\_t}}\ **unset\_champs,\ \textcolor{keywordtype}{int}\ lr[]);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{/*\ Arena\ operations\ */}}
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{parser_8h_a2b70f226cef88f6a69984b888c772402}{write\_champs\_in\_arena}}(\mbox{\hyperlink{structcorewar__t}{corewar\_t}}\ *\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}});}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ PARSER\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

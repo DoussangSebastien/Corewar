@@ -1,0 +1,413 @@
+\doxysection{opcode.\+h File Reference}
+\hypertarget{opcode_8h}{}\label{opcode_8h}\index{opcode.h@{opcode.h}}
+
+
+Corewar opcode definitions and function prototypes.  
+
+
+{\ttfamily \#include "{}corewar.\+h"{}}\newline
+Include dependency graph for opcode.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{opcode_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structopcode__t}{opcode\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Associates an opcode with its corresponding execution function. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{opcode_8h_a8a41b23d423b1562e58f20d5c7d37768}{LIVE\+\_\+\+SIZE}}~5
+\begin{DoxyCompactList}\small\item\em Size (in bytes) of the {\ttfamily live} instruction in the Corewar arena. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{opcode_8h_a6fc2595883b3a45c884896993db0c0c2}{add}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily add} instruction\+: Adds two registers and stores the result in a third. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_aee2b62362821bb4d57a22fb129f6bbd6}{aff}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily aff} instruction\+: Displays a character from a register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_add914ec247ec654ec69fb107d0c7ddf2}{and\+\_\+command}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily and} instruction\+: Bitwise AND operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_ab1a929d2351e4b080196d84858a662b0}{my\+\_\+fork}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily fork} instruction\+: Creates a new process at PC + offset. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_aaf5b24f7f8cb1e4064b68922f5b44b3f}{lfork}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily lfork} instruction\+: Long fork (like {\ttfamily fork} but with 16-\/bit offset). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a3e0b8b5aaec6c3245ffc06d84c30f593}{ldi}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily ldi} instruction\+: Loads a value from indirect addressing into a register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a58dcd16516cb3bf3cbb4411d215e5a34}{lldi}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily lldi} instruction\+: Long {\ttfamily ldi} (no IDX\+\_\+\+MOD restriction). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a072d20dcb42e9749c0156cccee1c019f}{live}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily live} instruction\+: Marks a champion as alive. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_ad387c548fb117c1f47fe66eeacefaad0}{lload}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily lld} instruction\+: Long load (direct/indirect -\/\texorpdfstring{$>$}{>} register). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a64ec47a879f2e55d70b53ec7182be7fa}{load}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily ld} instruction\+: Loads a value into a register. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_ae76d6f595475e6e37c8cbb4d5d2225dd}{or\+\_\+command}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily or} instruction\+: Bitwise OR operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a1cd7d8e1901b4be666067fddafa436a5}{store}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily st} instruction\+: Stores a register value into memory (register/indirect). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_acd0a6997d0241cfb4cf189905ba5d1a2}{store\+\_\+i}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily sti} instruction\+: Stores a register value with indirect addressing. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a30ccf3737de31fd4d29fed6e0a63bbe5}{sub}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily sub} instruction\+: Subtracts two registers and stores the result. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_a99fa7e954bc213357dd6aa4940bd6718}{xor\+\_\+command}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily xor} instruction\+: Bitwise XOR operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{opcode_8h_ab96f56197d82838e3e27a400a812e591}{zjump}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em {\ttfamily zjmp} instruction\+: Conditional jump (if carry flag is set). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{opcode_8h_a5aa7d0a9b544e700e31bf8c5a41c5242}{dup\+\_\+process}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}process, short param)
+\begin{DoxyCompactList}\small\item\em Duplicates a process (used by {\ttfamily fork}/{\ttfamily lfork}). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structopcode__t}{opcode\+\_\+t}} \mbox{\hyperlink{opcode_8h_a57a718178c2ba474ba2dd54fe27f09d8}{opcode}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Global array mapping opcodes to their functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Corewar opcode definitions and function prototypes. 
+
+Defines the opcode structure and function prototypes for Corewar virtual machine instructions. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{opcode_8h_a8a41b23d423b1562e58f20d5c7d37768}\index{opcode.h@{opcode.h}!LIVE\_SIZE@{LIVE\_SIZE}}
+\index{LIVE\_SIZE@{LIVE\_SIZE}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{LIVE\_SIZE}{LIVE\_SIZE}}
+{\footnotesize\ttfamily \label{opcode_8h_a8a41b23d423b1562e58f20d5c7d37768} 
+\#define LIVE\+\_\+\+SIZE~5}
+
+
+
+Size (in bytes) of the {\ttfamily live} instruction in the Corewar arena. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{opcode_8h_a6fc2595883b3a45c884896993db0c0c2}\index{opcode.h@{opcode.h}!add@{add}}
+\index{add@{add}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \label{opcode_8h_a6fc2595883b3a45c884896993db0c0c2} 
+int add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily add} instruction\+: Adds two registers and stores the result in a third. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{opcode_8h_a6fc2595883b3a45c884896993db0c0c2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_aee2b62362821bb4d57a22fb129f6bbd6}\index{opcode.h@{opcode.h}!aff@{aff}}
+\index{aff@{aff}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{aff()}{aff()}}
+{\footnotesize\ttfamily \label{opcode_8h_aee2b62362821bb4d57a22fb129f6bbd6} 
+int aff (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily aff} instruction\+: Displays a character from a register. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{opcode_8h_aee2b62362821bb4d57a22fb129f6bbd6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_add914ec247ec654ec69fb107d0c7ddf2}\index{opcode.h@{opcode.h}!and\_command@{and\_command}}
+\index{and\_command@{and\_command}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{and\_command()}{and\_command()}}
+{\footnotesize\ttfamily \label{opcode_8h_add914ec247ec654ec69fb107d0c7ddf2} 
+int and\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily and} instruction\+: Bitwise AND operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{opcode_8h_add914ec247ec654ec69fb107d0c7ddf2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a5aa7d0a9b544e700e31bf8c5a41c5242}\index{opcode.h@{opcode.h}!dup\_process@{dup\_process}}
+\index{dup\_process@{dup\_process}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{dup\_process()}{dup\_process()}}
+{\footnotesize\ttfamily \label{opcode_8h_a5aa7d0a9b544e700e31bf8c5a41c5242} 
+\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*} dup\+\_\+process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{short}]{param}{}\end{DoxyParamCaption})}
+
+
+
+Duplicates a process (used by {\ttfamily fork}/{\ttfamily lfork}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & The process to duplicate. \\
+\hline
+{\em param} & Additional parameter (e.\+g., fork offset). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+process\+\_\+t\texorpdfstring{$\ast$}{*} The new process copy. 
+\end{DoxyReturn}
+\Hypertarget{opcode_8h_a3e0b8b5aaec6c3245ffc06d84c30f593}\index{opcode.h@{opcode.h}!ldi@{ldi}}
+\index{ldi@{ldi}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{ldi()}{ldi()}}
+{\footnotesize\ttfamily \label{opcode_8h_a3e0b8b5aaec6c3245ffc06d84c30f593} 
+int ldi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily ldi} instruction\+: Loads a value from indirect addressing into a register. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{opcode_8h_a3e0b8b5aaec6c3245ffc06d84c30f593_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_aaf5b24f7f8cb1e4064b68922f5b44b3f}\index{opcode.h@{opcode.h}!lfork@{lfork}}
+\index{lfork@{lfork}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{lfork()}{lfork()}}
+{\footnotesize\ttfamily \label{opcode_8h_aaf5b24f7f8cb1e4064b68922f5b44b3f} 
+int lfork (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily lfork} instruction\+: Long fork (like {\ttfamily fork} but with 16-\/bit offset). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{opcode_8h_aaf5b24f7f8cb1e4064b68922f5b44b3f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a072d20dcb42e9749c0156cccee1c019f}\index{opcode.h@{opcode.h}!live@{live}}
+\index{live@{live}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{live()}{live()}}
+{\footnotesize\ttfamily \label{opcode_8h_a072d20dcb42e9749c0156cccee1c019f} 
+int live (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily live} instruction\+: Marks a champion as alive. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{opcode_8h_a072d20dcb42e9749c0156cccee1c019f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a58dcd16516cb3bf3cbb4411d215e5a34}\index{opcode.h@{opcode.h}!lldi@{lldi}}
+\index{lldi@{lldi}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{lldi()}{lldi()}}
+{\footnotesize\ttfamily \label{opcode_8h_a58dcd16516cb3bf3cbb4411d215e5a34} 
+int lldi (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily lldi} instruction\+: Long {\ttfamily ldi} (no IDX\+\_\+\+MOD restriction). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{opcode_8h_a58dcd16516cb3bf3cbb4411d215e5a34_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_ad387c548fb117c1f47fe66eeacefaad0}\index{opcode.h@{opcode.h}!lload@{lload}}
+\index{lload@{lload}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{lload()}{lload()}}
+{\footnotesize\ttfamily \label{opcode_8h_ad387c548fb117c1f47fe66eeacefaad0} 
+int lload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily lld} instruction\+: Long load (direct/indirect -\/\texorpdfstring{$>$}{>} register). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{opcode_8h_ad387c548fb117c1f47fe66eeacefaad0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a64ec47a879f2e55d70b53ec7182be7fa}\index{opcode.h@{opcode.h}!load@{load}}
+\index{load@{load}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily \label{opcode_8h_a64ec47a879f2e55d70b53ec7182be7fa} 
+int load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily ld} instruction\+: Loads a value into a register. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{opcode_8h_a64ec47a879f2e55d70b53ec7182be7fa_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_ab1a929d2351e4b080196d84858a662b0}\index{opcode.h@{opcode.h}!my\_fork@{my\_fork}}
+\index{my\_fork@{my\_fork}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{my\_fork()}{my\_fork()}}
+{\footnotesize\ttfamily \label{opcode_8h_ab1a929d2351e4b080196d84858a662b0} 
+int my\+\_\+fork (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily fork} instruction\+: Creates a new process at PC + offset. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{opcode_8h_ab1a929d2351e4b080196d84858a662b0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_ae76d6f595475e6e37c8cbb4d5d2225dd}\index{opcode.h@{opcode.h}!or\_command@{or\_command}}
+\index{or\_command@{or\_command}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{or\_command()}{or\_command()}}
+{\footnotesize\ttfamily \label{opcode_8h_ae76d6f595475e6e37c8cbb4d5d2225dd} 
+int or\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily or} instruction\+: Bitwise OR operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{opcode_8h_ae76d6f595475e6e37c8cbb4d5d2225dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a1cd7d8e1901b4be666067fddafa436a5}\index{opcode.h@{opcode.h}!store@{store}}
+\index{store@{store}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{store()}{store()}}
+{\footnotesize\ttfamily \label{opcode_8h_a1cd7d8e1901b4be666067fddafa436a5} 
+int store (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily st} instruction\+: Stores a register value into memory (register/indirect). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{opcode_8h_a1cd7d8e1901b4be666067fddafa436a5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_acd0a6997d0241cfb4cf189905ba5d1a2}\index{opcode.h@{opcode.h}!store\_i@{store\_i}}
+\index{store\_i@{store\_i}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{store\_i()}{store\_i()}}
+{\footnotesize\ttfamily \label{opcode_8h_acd0a6997d0241cfb4cf189905ba5d1a2} 
+int store\+\_\+i (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily sti} instruction\+: Stores a register value with indirect addressing. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{opcode_8h_acd0a6997d0241cfb4cf189905ba5d1a2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a30ccf3737de31fd4d29fed6e0a63bbe5}\index{opcode.h@{opcode.h}!sub@{sub}}
+\index{sub@{sub}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{sub()}{sub()}}
+{\footnotesize\ttfamily \label{opcode_8h_a30ccf3737de31fd4d29fed6e0a63bbe5} 
+int sub (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily sub} instruction\+: Subtracts two registers and stores the result. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{opcode_8h_a30ccf3737de31fd4d29fed6e0a63bbe5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_a99fa7e954bc213357dd6aa4940bd6718}\index{opcode.h@{opcode.h}!xor\_command@{xor\_command}}
+\index{xor\_command@{xor\_command}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{xor\_command()}{xor\_command()}}
+{\footnotesize\ttfamily \label{opcode_8h_a99fa7e954bc213357dd6aa4940bd6718} 
+int xor\+\_\+command (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily xor} instruction\+: Bitwise XOR operation (reg/ind/dir -\/\texorpdfstring{$>$}{>} reg). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{opcode_8h_a99fa7e954bc213357dd6aa4940bd6718_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{opcode_8h_ab96f56197d82838e3e27a400a812e591}\index{opcode.h@{opcode.h}!zjump@{zjump}}
+\index{zjump@{zjump}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{zjump()}{zjump()}}
+{\footnotesize\ttfamily \label{opcode_8h_ab96f56197d82838e3e27a400a812e591} 
+int zjump (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+{\ttfamily zjmp} instruction\+: Conditional jump (if carry flag is set). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{opcode_8h_ab96f56197d82838e3e27a400a812e591_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{opcode_8h_a57a718178c2ba474ba2dd54fe27f09d8}\index{opcode.h@{opcode.h}!opcode@{opcode}}
+\index{opcode@{opcode}!opcode.h@{opcode.h}}
+\doxysubsubsection{\texorpdfstring{opcode}{opcode}}
+{\footnotesize\ttfamily \label{opcode_8h_a57a718178c2ba474ba2dd54fe27f09d8} 
+const \mbox{\hyperlink{structopcode__t}{opcode\+\_\+t}} opcode\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global array mapping opcodes to their functions. 
+
+\begin{DoxyNote}{Note}
+Defined in the corresponding source file. 
+\end{DoxyNote}

@@ -1,0 +1,89 @@
+\doxysection{process\+\_\+t Struct Reference}
+\hypertarget{structprocess__t}{}\label{structprocess__t}\index{process\_t@{process\_t}}
+
+
+Represents a process executing in the VM.  
+
+
+
+
+{\ttfamily \#include $<$corewar.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structprocess__t_a657bc5eeb15125ad9b868f7cb31a9ff3}{regs}} \mbox{[}\mbox{\hyperlink{op_8h_abf79fff3592092be3713730487d8987e}{REG\+\_\+\+NUMBER}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structprocess__t_a6a1fd8d5fb78048ebcd0c7cc9db79a52}{pc}}
+\item 
+int \mbox{\hyperlink{structprocess__t_a0eb2346d88f4602ededfb78a53cacc97}{start}}
+\item 
+int \mbox{\hyperlink{structprocess__t_a65ccd47413e47dc011db09ae9de10e95}{id}}
+\item 
+int \mbox{\hyperlink{structprocess__t_a9f2e583b58543ea327cc69277c5dfb1f}{size}}
+\item 
+bool \mbox{\hyperlink{structprocess__t_a87e960a6367a99312e26531e33a571c0}{carry}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structprocess__t_a894ecb00c7fd3c08a06c78b08dc4abba}{body}}
+\item 
+int \mbox{\hyperlink{structprocess__t_a04ef9720de85f168a8ccb0752bee664c}{command\+\_\+cycle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a process executing in the VM. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structprocess__t_a894ecb00c7fd3c08a06c78b08dc4abba}\index{process\_t@{process\_t}!body@{body}}
+\index{body@{body}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{body}{body}}
+{\footnotesize\ttfamily \label{structprocess__t_a894ecb00c7fd3c08a06c78b08dc4abba} 
+char\texorpdfstring{$\ast$}{*} process\+\_\+t\+::body}
+
+Process executable code \Hypertarget{structprocess__t_a87e960a6367a99312e26531e33a571c0}\index{process\_t@{process\_t}!carry@{carry}}
+\index{carry@{carry}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{carry}{carry}}
+{\footnotesize\ttfamily \label{structprocess__t_a87e960a6367a99312e26531e33a571c0} 
+bool process\+\_\+t\+::carry}
+
+Carry flag \Hypertarget{structprocess__t_a04ef9720de85f168a8ccb0752bee664c}\index{process\_t@{process\_t}!command\_cycle@{command\_cycle}}
+\index{command\_cycle@{command\_cycle}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{command\_cycle}{command\_cycle}}
+{\footnotesize\ttfamily \label{structprocess__t_a04ef9720de85f168a8ccb0752bee664c} 
+int process\+\_\+t\+::command\+\_\+cycle}
+
+Cycles until next command \Hypertarget{structprocess__t_a65ccd47413e47dc011db09ae9de10e95}\index{process\_t@{process\_t}!id@{id}}
+\index{id@{id}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{structprocess__t_a65ccd47413e47dc011db09ae9de10e95} 
+int process\+\_\+t\+::id}
+
+Process ID \Hypertarget{structprocess__t_a6a1fd8d5fb78048ebcd0c7cc9db79a52}\index{process\_t@{process\_t}!pc@{pc}}
+\index{pc@{pc}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{pc}{pc}}
+{\footnotesize\ttfamily \label{structprocess__t_a6a1fd8d5fb78048ebcd0c7cc9db79a52} 
+int process\+\_\+t\+::pc}
+
+Program counter \Hypertarget{structprocess__t_a657bc5eeb15125ad9b868f7cb31a9ff3}\index{process\_t@{process\_t}!regs@{regs}}
+\index{regs@{regs}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{regs}{regs}}
+{\footnotesize\ttfamily \label{structprocess__t_a657bc5eeb15125ad9b868f7cb31a9ff3} 
+int process\+\_\+t\+::regs\mbox{[}\mbox{\hyperlink{op_8h_abf79fff3592092be3713730487d8987e}{REG\+\_\+\+NUMBER}}\mbox{]}}
+
+Process registers \Hypertarget{structprocess__t_a9f2e583b58543ea327cc69277c5dfb1f}\index{process\_t@{process\_t}!size@{size}}
+\index{size@{size}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \label{structprocess__t_a9f2e583b58543ea327cc69277c5dfb1f} 
+int process\+\_\+t\+::size}
+
+Process size \Hypertarget{structprocess__t_a0eb2346d88f4602ededfb78a53cacc97}\index{process\_t@{process\_t}!start@{start}}
+\index{start@{start}!process\_t@{process\_t}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily \label{structprocess__t_a0eb2346d88f4602ededfb78a53cacc97} 
+int process\+\_\+t\+::start}
+
+Starting address 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{corewar_8h}{corewar.\+h}}\end{DoxyCompactItemize}

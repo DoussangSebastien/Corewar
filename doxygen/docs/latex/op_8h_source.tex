@@ -1,0 +1,89 @@
+\doxysection{op.\+h}
+\hypertarget{op_8h_source}{}\label{op_8h_source}\index{op.h@{op.h}}
+\mbox{\hyperlink{op_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ \_OP\_H\_}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ \_OP\_H\_}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{/*\ Memory\ and\ addressing\ constants\ */}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#define\ MEM\_SIZE\ (6\ *\ 1024)}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ IDX\_MOD\ 512}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ MAX\_ARGS\_NUMBER\ 4}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{comment}{/*\ Syntax\ constants\ */}}
+\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#define\ COMMENT\_CHAR\ '\#'}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ LABEL\_CHAR\ ':'}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ DIRECT\_CHAR\ '\%'}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ SEPARATOR\_CHAR\ ','}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ LABEL\_CHARS\ "{}abcdefghijklmnopqrstuvwxyz\_0123456789"{}}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{/*\ Directive\ strings\ */}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ NAME\_CMD\_STRING\ "{}.name"{}}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00075\ \textcolor{preprocessor}{\#define\ COMMENT\_CMD\_STRING\ "{}.comment"{}}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{comment}{/*\ Register\ configuration\ */}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ REG\_NUMBER\ 16}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{comment}{/*\ Argument\ type\ system\ */}}
+\DoxyCodeLine{00089\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{op_8h_a4819392a6eb5f0799ea856ae99557fba}{args\_type\_t}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00095\ \textcolor{preprocessor}{\#define\ T\_REG\ 1}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00101\ \textcolor{preprocessor}{\#define\ T\_DIR\ 2}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00107\ \textcolor{preprocessor}{\#define\ T\_IND\ 4}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#define\ T\_LAB\ 8}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00119\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structop__s}{op\_s}}\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structop__s_a8b0d3b15d6578828860cca70634bed74}{mnemonique}};\ \ \ \ \ \ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structop__s_aae3c34e3f4d110055f5aba403d7ccceb}{nbr\_args}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{op_8h_a4819392a6eb5f0799ea856ae99557fba}{args\_type\_t}}\ \mbox{\hyperlink{structop__s_acb28807a40fb0978c9c2bbe1480df5b0}{type}}[\mbox{\hyperlink{op_8h_acf0c8d7a85fa32c4c8be29d26bda0268}{MAX\_ARGS\_NUMBER}}];\ }
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structop__s_a09710d11b050cd5090fe27eeb9a176bd}{code}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structop__s_aeabc3150cedffbbd4d7c5c4636db9e6f}{nbr\_cycles}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{structop__s_acbbd7859ed019b3925d0043843790cc8}{comment}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00126\ \}\ \mbox{\hyperlink{structop__t}{op\_t}};}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00128\ \textcolor{comment}{/*\ Size\ constants\ (in\ bytes)\ */}}
+\DoxyCodeLine{00133\ \textcolor{preprocessor}{\#define\ IND\_SIZE\ 2}}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00139\ \textcolor{preprocessor}{\#define\ DIR\_SIZE\ 4}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00145\ \textcolor{preprocessor}{\#define\ REG\_SIZE\ DIR\_SIZE}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{comment}{/*\ Operation\ table\ */}}
+\DoxyCodeLine{00153\ \textcolor{keyword}{extern}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{structop__t}{op\_t}}\ \mbox{\hyperlink{op_8h_a733c282981b13e602918d06a27f912d0}{op\_tab}}[];}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{comment}{/*\ Champion\ header\ structure\ */}}
+\DoxyCodeLine{00160\ \textcolor{preprocessor}{\#define\ PROG\_NAME\_LENGTH\ 128}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00166\ \textcolor{preprocessor}{\#define\ COMMENT\_LENGTH\ 2048}}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00172\ \textcolor{preprocessor}{\#define\ COREWAR\_EXEC\_MAGIC\ 0xea83f3}}
+\DoxyCodeLine{00173\ }
+\DoxyCodeLine{00178\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structheader__s}{header\_s}}\ \{}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structheader__s_a7675f81758a6c3f9b4e727126b247a5f}{magic}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00180\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structheader__s_a8f6bc11f16b3ac72228f92abddcece4b}{prog\_name}}[\mbox{\hyperlink{op_8h_a2bd1b5655c5d92af5ebe7f4bb3436b73}{PROG\_NAME\_LENGTH}}\ +\ 1];\ }
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structheader__s_abdde63ac7e59c397fa36fb7a4c988af0}{prog\_size}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{structheader__s_ae432ef050d119d31270ec31f413f8372}{comment}}[\mbox{\hyperlink{op_8h_a31a10f5d8e8f9085ce0224cf043cb5fa}{COMMENT\_LENGTH}}\ +\ 1];\ }
+\DoxyCodeLine{00183\ \}\ \mbox{\hyperlink{structheader__t}{header\_t}};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \textcolor{comment}{/*\ Live\ cycle\ management\ */}}
+\DoxyCodeLine{00190\ \textcolor{preprocessor}{\#define\ CYCLE\_TO\_DIE\ 1536}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00196\ \textcolor{preprocessor}{\#define\ CYCLE\_DELTA\ 5}}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00202\ \textcolor{preprocessor}{\#define\ NBR\_LIVE\ 40}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_OP\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

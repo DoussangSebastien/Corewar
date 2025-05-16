@@ -1,0 +1,7 @@
+<map id="corewar.h" name="corewar.h">
+<area shape="rect" id="Node000001" title="Corewar virtual machine main header." alt="" coords="55,5,134,35"/>
+<area shape="rect" id="Node000002" href="$opcode_8h.html" title="Corewar opcode definitions and function prototypes." alt="" coords="5,83,85,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,50,56,84,52,81,75,47"/>
+<area shape="rect" id="Node000003" href="$parser_8h.html" title="Corewar binary parser and memory allocation." alt="" coords="109,83,181,113"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,47,138,81,133,84,110,50"/>
+</map>

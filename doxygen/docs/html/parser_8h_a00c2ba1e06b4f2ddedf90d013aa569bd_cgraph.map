@@ -1,0 +1,5 @@
+<map id="multiple_free_areas" name="multiple_free_areas">
+<area shape="rect" id="Node000001" title="Handles memory allocation when multiple free areas exist." alt="" coords="5,5,148,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="196,5,266,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,18,180,18,180,23,148,23"/>
+</map>

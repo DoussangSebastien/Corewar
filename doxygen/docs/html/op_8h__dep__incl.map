@@ -1,0 +1,9 @@
+<map id="op.h" name="op.h">
+<area shape="rect" id="Node000001" title="Corewar operation definitions and VM constants." alt="" coords="70,5,119,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html" title="Corewar virtual machine main header." alt="" coords="55,83,134,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,51,97,82,92,82,92,51"/>
+<area shape="rect" id="Node000003" href="$opcode_8h.html" title="Corewar opcode definitions and function prototypes." alt="" coords="5,161,85,190"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="79,127,56,162,52,159,75,124"/>
+<area shape="rect" id="Node000004" href="$parser_8h.html" title="Corewar binary parser and memory allocation." alt="" coords="109,161,181,190"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="115,124,138,159,133,162,110,127"/>
+</map>

@@ -1,0 +1,384 @@
+\doxysection{op.\+h File Reference}
+\hypertarget{op_8h}{}\label{op_8h}\index{op.h@{op.h}}
+
+
+Corewar operation definitions and VM constants.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{op_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structop__s}{op\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structheader__s}{header\+\_\+s}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{op_8h_a2dcf8c45f945dd0c4301a94700f2112c}{MEM\+\_\+\+SIZE}}~(6 \texorpdfstring{$\ast$}{*} 1024)
+\begin{DoxyCompactList}\small\item\em Total size of the Corewar arena memory (6KB) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_ad6e5e32c030d71f5640313afc6c4acac}{IDX\+\_\+\+MOD}}~512
+\begin{DoxyCompactList}\small\item\em Index modulo for memory addressing. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_acf0c8d7a85fa32c4c8be29d26bda0268}{MAX\+\_\+\+ARGS\+\_\+\+NUMBER}}~4
+\begin{DoxyCompactList}\small\item\em Maximum number of arguments per operation. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_aefd3055a62be1d53ea09e84ab6548d0a}{COMMENT\+\_\+\+CHAR}}~\textquotesingle{}\#\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character that starts a comment. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a01fb005326594eb0621e63c6c807b480}{LABEL\+\_\+\+CHAR}}~\textquotesingle{}\+:\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character that starts a label. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a52ec36d9a0726b08c963cd74cbe5fb9c}{DIRECT\+\_\+\+CHAR}}~\textquotesingle{}\%\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Prefix for direct values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a3ca4c779eebe0944ac894ab23fe6d045}{SEPARATOR\+\_\+\+CHAR}}~\textquotesingle{},\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em Character separating arguments. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a3621102e1cf1524115b949425ee44321}{LABEL\+\_\+\+CHARS}}~"{}abcdefghijklmnopqrstuvwxyz\+\_\+0123456789"{}
+\begin{DoxyCompactList}\small\item\em Valid characters for label names. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a0efba269c56b5213f5ea493bc5eb89d8}{NAME\+\_\+\+CMD\+\_\+\+STRING}}~"{}.name"{}
+\begin{DoxyCompactList}\small\item\em Champion name directive string. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a903216682d110c839f2ae53ce7f7a815}{COMMENT\+\_\+\+CMD\+\_\+\+STRING}}~"{}.comment"{}
+\begin{DoxyCompactList}\small\item\em Champion comment directive string. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_abf79fff3592092be3713730487d8987e}{REG\+\_\+\+NUMBER}}~16
+\begin{DoxyCompactList}\small\item\em Number of available registers. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a109aeb5473f651bba0263dbf92c97221}{T\+\_\+\+REG}}~1
+\begin{DoxyCompactList}\small\item\em Flag for register argument type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a91136bcd71a9f499304f5d7e7e9d6376}{T\+\_\+\+DIR}}~2
+\begin{DoxyCompactList}\small\item\em Flag for direct argument type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a65c4475051ac76603d1360b0e95a5fbc}{T\+\_\+\+IND}}~4
+\begin{DoxyCompactList}\small\item\em Flag for indirect argument type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a156d74f01ebe6bde77ff9a0977502337}{T\+\_\+\+LAB}}~8
+\begin{DoxyCompactList}\small\item\em Flag for label argument type. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a73364e5042a52312358ae1c5c8a6c265}{IND\+\_\+\+SIZE}}~2
+\begin{DoxyCompactList}\small\item\em Size of indirect values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_aac52a71d47407de47c401baf9c827cdb}{DIR\+\_\+\+SIZE}}~4
+\begin{DoxyCompactList}\small\item\em Size of direct values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_aa4201eda80810663e28bb80fab8d5c82}{REG\+\_\+\+SIZE}}~\mbox{\hyperlink{op_8h_aac52a71d47407de47c401baf9c827cdb}{DIR\+\_\+\+SIZE}}
+\begin{DoxyCompactList}\small\item\em Size of register values (same as direct) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a2bd1b5655c5d92af5ebe7f4bb3436b73}{PROG\+\_\+\+NAME\+\_\+\+LENGTH}}~128
+\begin{DoxyCompactList}\small\item\em Maximum length of champion name. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a31a10f5d8e8f9085ce0224cf043cb5fa}{COMMENT\+\_\+\+LENGTH}}~2048
+\begin{DoxyCompactList}\small\item\em Maximum length of champion comment. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_aa13425afc62cf7a8ca3546ac3046b804}{COREWAR\+\_\+\+EXEC\+\_\+\+MAGIC}}~0xea83f3
+\begin{DoxyCompactList}\small\item\em Magic number identifying Corewar executables. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a185b5fb4b0b4371b9ef908ac34024d9b}{CYCLE\+\_\+\+TO\+\_\+\+DIE}}~1536
+\begin{DoxyCompactList}\small\item\em Initial number of cycles before death check. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_a928a2f68c987f23790697b0b7cce9ade}{CYCLE\+\_\+\+DELTA}}~5
+\begin{DoxyCompactList}\small\item\em Cycle reduction amount after NBR\+\_\+\+LIVE calls. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{op_8h_ab91a89e42185c1558830eaa6452a93ef}{NBR\+\_\+\+LIVE}}~40
+\begin{DoxyCompactList}\small\item\em Number of live calls before cycle reduction. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \mbox{\hyperlink{op_8h_a4819392a6eb5f0799ea856ae99557fba}{args\+\_\+type\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type for argument type flags. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structop__s}{op\+\_\+s}} \mbox{\hyperlink{op_8h_a51ce7549e6b9948b233d73c4c0d0fe02}{op\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structheader__s}{header\+\_\+s}} \mbox{\hyperlink{op_8h_a4eb4dd7e74c119ccddb3032242467d65}{header\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{structop__t}{op\+\_\+t}} \mbox{\hyperlink{op_8h_a733c282981b13e602918d06a27f912d0}{op\+\_\+tab}} \mbox{[}$\,$\mbox{]}
+\begin{DoxyCompactList}\small\item\em Global table of all VM operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Corewar operation definitions and VM constants. 
+
+Contains all VM specifications, operation codes, and structures
+
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025 
+\end{DoxyCopyright}
+\begin{DoxyRemark}{Remarks}
+Robot Factory version 
+\end{DoxyRemark}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{op_8h_aefd3055a62be1d53ea09e84ab6548d0a}\index{op.h@{op.h}!COMMENT\_CHAR@{COMMENT\_CHAR}}
+\index{COMMENT\_CHAR@{COMMENT\_CHAR}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{COMMENT\_CHAR}{COMMENT\_CHAR}}
+{\footnotesize\ttfamily \label{op_8h_aefd3055a62be1d53ea09e84ab6548d0a} 
+\#define COMMENT\+\_\+\+CHAR~\textquotesingle{}\#\textquotesingle{}}
+
+
+
+Character that starts a comment. 
+
+\Hypertarget{op_8h_a903216682d110c839f2ae53ce7f7a815}\index{op.h@{op.h}!COMMENT\_CMD\_STRING@{COMMENT\_CMD\_STRING}}
+\index{COMMENT\_CMD\_STRING@{COMMENT\_CMD\_STRING}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{COMMENT\_CMD\_STRING}{COMMENT\_CMD\_STRING}}
+{\footnotesize\ttfamily \label{op_8h_a903216682d110c839f2ae53ce7f7a815} 
+\#define COMMENT\+\_\+\+CMD\+\_\+\+STRING~"{}.comment"{}}
+
+
+
+Champion comment directive string. 
+
+\Hypertarget{op_8h_a31a10f5d8e8f9085ce0224cf043cb5fa}\index{op.h@{op.h}!COMMENT\_LENGTH@{COMMENT\_LENGTH}}
+\index{COMMENT\_LENGTH@{COMMENT\_LENGTH}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{COMMENT\_LENGTH}{COMMENT\_LENGTH}}
+{\footnotesize\ttfamily \label{op_8h_a31a10f5d8e8f9085ce0224cf043cb5fa} 
+\#define COMMENT\+\_\+\+LENGTH~2048}
+
+
+
+Maximum length of champion comment. 
+
+\Hypertarget{op_8h_aa13425afc62cf7a8ca3546ac3046b804}\index{op.h@{op.h}!COREWAR\_EXEC\_MAGIC@{COREWAR\_EXEC\_MAGIC}}
+\index{COREWAR\_EXEC\_MAGIC@{COREWAR\_EXEC\_MAGIC}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{COREWAR\_EXEC\_MAGIC}{COREWAR\_EXEC\_MAGIC}}
+{\footnotesize\ttfamily \label{op_8h_aa13425afc62cf7a8ca3546ac3046b804} 
+\#define COREWAR\+\_\+\+EXEC\+\_\+\+MAGIC~0xea83f3}
+
+
+
+Magic number identifying Corewar executables. 
+
+\Hypertarget{op_8h_a928a2f68c987f23790697b0b7cce9ade}\index{op.h@{op.h}!CYCLE\_DELTA@{CYCLE\_DELTA}}
+\index{CYCLE\_DELTA@{CYCLE\_DELTA}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{CYCLE\_DELTA}{CYCLE\_DELTA}}
+{\footnotesize\ttfamily \label{op_8h_a928a2f68c987f23790697b0b7cce9ade} 
+\#define CYCLE\+\_\+\+DELTA~5}
+
+
+
+Cycle reduction amount after NBR\+\_\+\+LIVE calls. 
+
+\Hypertarget{op_8h_a185b5fb4b0b4371b9ef908ac34024d9b}\index{op.h@{op.h}!CYCLE\_TO\_DIE@{CYCLE\_TO\_DIE}}
+\index{CYCLE\_TO\_DIE@{CYCLE\_TO\_DIE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{CYCLE\_TO\_DIE}{CYCLE\_TO\_DIE}}
+{\footnotesize\ttfamily \label{op_8h_a185b5fb4b0b4371b9ef908ac34024d9b} 
+\#define CYCLE\+\_\+\+TO\+\_\+\+DIE~1536}
+
+
+
+Initial number of cycles before death check. 
+
+\Hypertarget{op_8h_aac52a71d47407de47c401baf9c827cdb}\index{op.h@{op.h}!DIR\_SIZE@{DIR\_SIZE}}
+\index{DIR\_SIZE@{DIR\_SIZE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{DIR\_SIZE}{DIR\_SIZE}}
+{\footnotesize\ttfamily \label{op_8h_aac52a71d47407de47c401baf9c827cdb} 
+\#define DIR\+\_\+\+SIZE~4}
+
+
+
+Size of direct values. 
+
+\Hypertarget{op_8h_a52ec36d9a0726b08c963cd74cbe5fb9c}\index{op.h@{op.h}!DIRECT\_CHAR@{DIRECT\_CHAR}}
+\index{DIRECT\_CHAR@{DIRECT\_CHAR}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{DIRECT\_CHAR}{DIRECT\_CHAR}}
+{\footnotesize\ttfamily \label{op_8h_a52ec36d9a0726b08c963cd74cbe5fb9c} 
+\#define DIRECT\+\_\+\+CHAR~\textquotesingle{}\%\textquotesingle{}}
+
+
+
+Prefix for direct values. 
+
+\Hypertarget{op_8h_ad6e5e32c030d71f5640313afc6c4acac}\index{op.h@{op.h}!IDX\_MOD@{IDX\_MOD}}
+\index{IDX\_MOD@{IDX\_MOD}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{IDX\_MOD}{IDX\_MOD}}
+{\footnotesize\ttfamily \label{op_8h_ad6e5e32c030d71f5640313afc6c4acac} 
+\#define IDX\+\_\+\+MOD~512}
+
+
+
+Index modulo for memory addressing. 
+
+Used to wrap around the arena when using indirect addressing \Hypertarget{op_8h_a73364e5042a52312358ae1c5c8a6c265}\index{op.h@{op.h}!IND\_SIZE@{IND\_SIZE}}
+\index{IND\_SIZE@{IND\_SIZE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{IND\_SIZE}{IND\_SIZE}}
+{\footnotesize\ttfamily \label{op_8h_a73364e5042a52312358ae1c5c8a6c265} 
+\#define IND\+\_\+\+SIZE~2}
+
+
+
+Size of indirect values. 
+
+\Hypertarget{op_8h_a01fb005326594eb0621e63c6c807b480}\index{op.h@{op.h}!LABEL\_CHAR@{LABEL\_CHAR}}
+\index{LABEL\_CHAR@{LABEL\_CHAR}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{LABEL\_CHAR}{LABEL\_CHAR}}
+{\footnotesize\ttfamily \label{op_8h_a01fb005326594eb0621e63c6c807b480} 
+\#define LABEL\+\_\+\+CHAR~\textquotesingle{}\+:\textquotesingle{}}
+
+
+
+Character that starts a label. 
+
+\Hypertarget{op_8h_a3621102e1cf1524115b949425ee44321}\index{op.h@{op.h}!LABEL\_CHARS@{LABEL\_CHARS}}
+\index{LABEL\_CHARS@{LABEL\_CHARS}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{LABEL\_CHARS}{LABEL\_CHARS}}
+{\footnotesize\ttfamily \label{op_8h_a3621102e1cf1524115b949425ee44321} 
+\#define LABEL\+\_\+\+CHARS~"{}abcdefghijklmnopqrstuvwxyz\+\_\+0123456789"{}}
+
+
+
+Valid characters for label names. 
+
+\Hypertarget{op_8h_acf0c8d7a85fa32c4c8be29d26bda0268}\index{op.h@{op.h}!MAX\_ARGS\_NUMBER@{MAX\_ARGS\_NUMBER}}
+\index{MAX\_ARGS\_NUMBER@{MAX\_ARGS\_NUMBER}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_ARGS\_NUMBER}{MAX\_ARGS\_NUMBER}}
+{\footnotesize\ttfamily \label{op_8h_acf0c8d7a85fa32c4c8be29d26bda0268} 
+\#define MAX\+\_\+\+ARGS\+\_\+\+NUMBER~4}
+
+
+
+Maximum number of arguments per operation. 
+
+\Hypertarget{op_8h_a2dcf8c45f945dd0c4301a94700f2112c}\index{op.h@{op.h}!MEM\_SIZE@{MEM\_SIZE}}
+\index{MEM\_SIZE@{MEM\_SIZE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{MEM\_SIZE}{MEM\_SIZE}}
+{\footnotesize\ttfamily \label{op_8h_a2dcf8c45f945dd0c4301a94700f2112c} 
+\#define MEM\+\_\+\+SIZE~(6 \texorpdfstring{$\ast$}{*} 1024)}
+
+
+
+Total size of the Corewar arena memory (6KB) 
+
+\Hypertarget{op_8h_a0efba269c56b5213f5ea493bc5eb89d8}\index{op.h@{op.h}!NAME\_CMD\_STRING@{NAME\_CMD\_STRING}}
+\index{NAME\_CMD\_STRING@{NAME\_CMD\_STRING}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{NAME\_CMD\_STRING}{NAME\_CMD\_STRING}}
+{\footnotesize\ttfamily \label{op_8h_a0efba269c56b5213f5ea493bc5eb89d8} 
+\#define NAME\+\_\+\+CMD\+\_\+\+STRING~"{}.name"{}}
+
+
+
+Champion name directive string. 
+
+\Hypertarget{op_8h_ab91a89e42185c1558830eaa6452a93ef}\index{op.h@{op.h}!NBR\_LIVE@{NBR\_LIVE}}
+\index{NBR\_LIVE@{NBR\_LIVE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{NBR\_LIVE}{NBR\_LIVE}}
+{\footnotesize\ttfamily \label{op_8h_ab91a89e42185c1558830eaa6452a93ef} 
+\#define NBR\+\_\+\+LIVE~40}
+
+
+
+Number of live calls before cycle reduction. 
+
+\Hypertarget{op_8h_a2bd1b5655c5d92af5ebe7f4bb3436b73}\index{op.h@{op.h}!PROG\_NAME\_LENGTH@{PROG\_NAME\_LENGTH}}
+\index{PROG\_NAME\_LENGTH@{PROG\_NAME\_LENGTH}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{PROG\_NAME\_LENGTH}{PROG\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \label{op_8h_a2bd1b5655c5d92af5ebe7f4bb3436b73} 
+\#define PROG\+\_\+\+NAME\+\_\+\+LENGTH~128}
+
+
+
+Maximum length of champion name. 
+
+\Hypertarget{op_8h_abf79fff3592092be3713730487d8987e}\index{op.h@{op.h}!REG\_NUMBER@{REG\_NUMBER}}
+\index{REG\_NUMBER@{REG\_NUMBER}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{REG\_NUMBER}{REG\_NUMBER}}
+{\footnotesize\ttfamily \label{op_8h_abf79fff3592092be3713730487d8987e} 
+\#define REG\+\_\+\+NUMBER~16}
+
+
+
+Number of available registers. 
+
+\Hypertarget{op_8h_aa4201eda80810663e28bb80fab8d5c82}\index{op.h@{op.h}!REG\_SIZE@{REG\_SIZE}}
+\index{REG\_SIZE@{REG\_SIZE}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{REG\_SIZE}{REG\_SIZE}}
+{\footnotesize\ttfamily \label{op_8h_aa4201eda80810663e28bb80fab8d5c82} 
+\#define REG\+\_\+\+SIZE~\mbox{\hyperlink{op_8h_aac52a71d47407de47c401baf9c827cdb}{DIR\+\_\+\+SIZE}}}
+
+
+
+Size of register values (same as direct) 
+
+\Hypertarget{op_8h_a3ca4c779eebe0944ac894ab23fe6d045}\index{op.h@{op.h}!SEPARATOR\_CHAR@{SEPARATOR\_CHAR}}
+\index{SEPARATOR\_CHAR@{SEPARATOR\_CHAR}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{SEPARATOR\_CHAR}{SEPARATOR\_CHAR}}
+{\footnotesize\ttfamily \label{op_8h_a3ca4c779eebe0944ac894ab23fe6d045} 
+\#define SEPARATOR\+\_\+\+CHAR~\textquotesingle{},\textquotesingle{}}
+
+
+
+Character separating arguments. 
+
+\Hypertarget{op_8h_a91136bcd71a9f499304f5d7e7e9d6376}\index{op.h@{op.h}!T\_DIR@{T\_DIR}}
+\index{T\_DIR@{T\_DIR}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{T\_DIR}{T\_DIR}}
+{\footnotesize\ttfamily \label{op_8h_a91136bcd71a9f499304f5d7e7e9d6376} 
+\#define T\+\_\+\+DIR~2}
+
+
+
+Flag for direct argument type. 
+
+\Hypertarget{op_8h_a65c4475051ac76603d1360b0e95a5fbc}\index{op.h@{op.h}!T\_IND@{T\_IND}}
+\index{T\_IND@{T\_IND}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{T\_IND}{T\_IND}}
+{\footnotesize\ttfamily \label{op_8h_a65c4475051ac76603d1360b0e95a5fbc} 
+\#define T\+\_\+\+IND~4}
+
+
+
+Flag for indirect argument type. 
+
+\Hypertarget{op_8h_a156d74f01ebe6bde77ff9a0977502337}\index{op.h@{op.h}!T\_LAB@{T\_LAB}}
+\index{T\_LAB@{T\_LAB}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{T\_LAB}{T\_LAB}}
+{\footnotesize\ttfamily \label{op_8h_a156d74f01ebe6bde77ff9a0977502337} 
+\#define T\+\_\+\+LAB~8}
+
+
+
+Flag for label argument type. 
+
+\Hypertarget{op_8h_a109aeb5473f651bba0263dbf92c97221}\index{op.h@{op.h}!T\_REG@{T\_REG}}
+\index{T\_REG@{T\_REG}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{T\_REG}{T\_REG}}
+{\footnotesize\ttfamily \label{op_8h_a109aeb5473f651bba0263dbf92c97221} 
+\#define T\+\_\+\+REG~1}
+
+
+
+Flag for register argument type. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{op_8h_a4819392a6eb5f0799ea856ae99557fba}\index{op.h@{op.h}!args\_type\_t@{args\_type\_t}}
+\index{args\_type\_t@{args\_type\_t}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{args\_type\_t}{args\_type\_t}}
+{\footnotesize\ttfamily \label{op_8h_a4819392a6eb5f0799ea856ae99557fba} 
+typedef char \mbox{\hyperlink{op_8h_a4819392a6eb5f0799ea856ae99557fba}{args\+\_\+type\+\_\+t}}}
+
+
+
+Type for argument type flags. 
+
+\Hypertarget{op_8h_a4eb4dd7e74c119ccddb3032242467d65}\index{op.h@{op.h}!header\_t@{header\_t}}
+\index{header\_t@{header\_t}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{header\_t}{header\_t}}
+{\footnotesize\ttfamily \label{op_8h_a4eb4dd7e74c119ccddb3032242467d65} 
+typedef struct \mbox{\hyperlink{structheader__s}{header\+\_\+s}} header\+\_\+t}
+
+\Hypertarget{op_8h_a51ce7549e6b9948b233d73c4c0d0fe02}\index{op.h@{op.h}!op\_t@{op\_t}}
+\index{op\_t@{op\_t}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{op\_t}{op\_t}}
+{\footnotesize\ttfamily \label{op_8h_a51ce7549e6b9948b233d73c4c0d0fe02} 
+typedef struct \mbox{\hyperlink{structop__s}{op\+\_\+s}} op\+\_\+t}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{op_8h_a733c282981b13e602918d06a27f912d0}\index{op.h@{op.h}!op\_tab@{op\_tab}}
+\index{op\_tab@{op\_tab}!op.h@{op.h}}
+\doxysubsubsection{\texorpdfstring{op\_tab}{op\_tab}}
+{\footnotesize\ttfamily \label{op_8h_a733c282981b13e602918d06a27f912d0} 
+const \mbox{\hyperlink{structop__t}{op\+\_\+t}} op\+\_\+tab\mbox{[}$\,$\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Global table of all VM operations. 
+
+\begin{DoxyNote}{Note}
+Defined in corresponding source file 
+\end{DoxyNote}

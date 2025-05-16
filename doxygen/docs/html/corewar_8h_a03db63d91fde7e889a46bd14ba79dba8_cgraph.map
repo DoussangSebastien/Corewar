@@ -1,0 +1,5 @@
+<map id="dump" name="dump">
+<area shape="rect" id="Node000001" title="Dumps the arena memory to stdout." alt="" coords="5,5,63,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="111,5,181,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,18,95,18,95,23,63,23"/>
+</map>

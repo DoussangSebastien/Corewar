@@ -1,0 +1,11 @@
+<map id="corewar_t" name="corewar_t">
+<area shape="rect" id="Node000001" title="Main VM state structure." alt="" coords="86,199,167,228"/>
+<area shape="rect" id="Node000002" href="$structdyna__champ__t.html" title="Dynamic array for champions." alt="" coords="5,102,115,132"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="81,143,119,197,115,200,76,146"/>
+<area shape="rect" id="Node000003" href="$structchamp__t.html" title="Represents a champion (player) in the arena." alt="" coords="23,5,97,35"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="63,51,63,102,57,102,57,51"/>
+<area shape="rect" id="Node000004" href="$structdyna__process__t.html" title="Dynamic array for processes." alt="" coords="138,102,254,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,146,139,200,135,197,175,143"/>
+<area shape="rect" id="Node000005" href="$structprocess__t.html" title="Represents a process executing in the VM." alt="" coords="156,5,236,35"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="199,51,199,102,193,102,193,51"/>
+</map>

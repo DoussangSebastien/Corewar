@@ -1,0 +1,5 @@
+<map id="lfork" name="lfork">
+<area shape="rect" id="Node000001" title="lfork instruction: Long fork (like fork but with 16&#45;bit offset)." alt="" coords="5,5,56,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="104,5,174,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,18,88,18,88,23,56,23"/>
+</map>

@@ -1,0 +1,51 @@
+<map id="corewar" name="corewar">
+<area shape="rect" id="Node000001" title="Main Corewar execution function." alt="" coords="218,619,288,648"/>
+<area shape="rect" id="Node000002" href="$opcode_8h.html#a6fc2595883b3a45c884896993db0c0c2" title="add instruction: Adds two registers and stores the result in a third." alt="" coords="65,5,110,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="249,603,246,483,234,317,224,232,210,155,191,92,180,67,168,49,155,38,141,31,110,24,111,19,142,26,158,34,172,45,185,65,196,90,215,154,229,232,240,316,251,482,254,603"/>
+<area shape="rect" id="Node000003" href="$opcode_8h.html#aee2b62362821bb4d57a22fb129f6bbd6" title="aff instruction: Displays a character from a register." alt="" coords="68,59,107,88"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="248,603,244,492,231,342,221,267,207,198,189,141,168,102,155,91,139,84,107,77,108,72,141,79,157,86,172,98,194,139,212,196,226,266,236,342,249,492,254,603"/>
+<area shape="rect" id="Node000004" href="$opcode_8h.html#add914ec247ec654ec69fb107d0c7ddf2" title="and instruction: Bitwise AND operation (reg/ind/dir &#45;&gt; reg)." alt="" coords="32,112,143,142"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="248,604,242,503,228,369,217,302,204,240,187,190,168,155,156,145,143,138,145,134,159,141,172,152,192,187,209,239,223,301,233,368,247,503,253,603"/>
+<area shape="rect" id="Node000005" href="$parser_8h.html#a502909699139bcf6dadb49798ce5aa1f" title="Checks for memory collisions between champions." alt="" coords="29,165,146,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="247,603,239,513,224,395,201,282,185,238,168,209,145,193,148,188,172,205,190,236,206,281,230,394,245,512,252,603"/>
+<area shape="rect" id="Node000006" href="$corewar_8h.html#ae9d8670d96b67593255f30d83936dba2" title="Frees the entire VM state." alt="" coords="26,219,149,248"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="246,604,237,524,221,422,198,325,184,288,168,262,148,248,151,243,172,258,188,285,203,323,226,421,242,523,251,603"/>
+<area shape="rect" id="Node000007" href="$corewar_8h.html#a03db63d91fde7e889a46bd14ba79dba8" title="Dumps the arena memory to stdout." alt="" coords="59,272,116,302"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="250,603,248,543,238,466,227,426,213,386,193,348,168,315,144,299,116,292,118,287,146,295,171,312,198,346,218,384,233,424,243,465,254,543,255,603"/>
+<area shape="rect" id="Node000008" href="$opcode_8h.html#a3e0b8b5aaec6c3245ffc06d84c30f593" title="ldi instruction: Loads a value from indirect addressing into a register." alt="" coords="68,325,107,355"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="248,604,243,553,231,490,207,425,189,395,168,369,154,358,138,351,107,344,108,339,140,346,157,354,172,365,194,392,212,423,236,489,249,552,254,603"/>
+<area shape="rect" id="Node000009" href="$opcode_8h.html#aaf5b24f7f8cb1e4064b68922f5b44b3f" title="lfork instruction: Long fork (like fork but with 16&#45;bit offset)." alt="" coords="62,379,113,408"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="245,604,238,563,224,514,201,465,186,442,168,422,141,406,113,399,114,393,143,401,171,418,190,439,205,462,229,512,243,562,251,603"/>
+<area shape="rect" id="Node000010" href="$opcode_8h.html#a072d20dcb42e9749c0156cccee1c019f" title="live instruction: Marks a champion as alive." alt="" coords="66,432,109,462"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="241,605,215,539,195,505,168,476,139,459,109,452,110,447,141,454,171,471,199,502,220,537,246,603"/>
+<area shape="rect" id="Node000011" href="$opcode_8h.html#a58dcd16516cb3bf3cbb4411d215e5a34" title="lldi instruction: Long ldi (no IDX_MOD restriction)." alt="" coords="68,485,107,515"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="234,606,206,566,188,546,168,529,137,514,106,506,108,500,139,509,171,525,192,542,210,563,238,603"/>
+<area shape="rect" id="Node000012" href="$opcode_8h.html#ad387c548fb117c1f47fe66eeacefaad0" title="lld instruction: Long load (direct/indirect &#45;&gt; register)." alt="" coords="62,539,113,568"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="218,612,169,583,112,562,114,557,171,578,220,607"/>
+<area shape="rect" id="Node000013" href="$opcode_8h.html#a64ec47a879f2e55d70b53ec7182be7fa" title="ld instruction: Loads a value into a register." alt="" coords="64,592,111,622"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="202,628,111,613,112,608,202,623"/>
+<area shape="rect" id="Node000014" href="$parser_8h.html#a00c2ba1e06b4f2ddedf90d013aa569bd" title="Handles memory allocation when multiple free areas exist." alt="" coords="16,645,159,675"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="203,644,159,651,158,646,202,639"/>
+<area shape="rect" id="Node000015" href="$opcode_8h.html#ab1a929d2351e4b080196d84858a662b0" title="fork instruction: Creates a new process at PC + offset." alt="" coords="51,699,124,728"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="220,660,171,689,125,706,123,702,169,684,218,655"/>
+<area shape="rect" id="Node000016" href="$parser_8h.html#ae09715a196ea5219374dc22459d3da3a" title="Handles memory allocation when one free area exists." alt="" coords="32,752,143,782"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="238,664,210,704,192,725,171,742,144,756,142,752,168,738,188,721,206,701,234,661"/>
+<area shape="rect" id="Node000017" href="$opcode_8h.html#ae76d6f595475e6e37c8cbb4d5d2225dd" title="or instruction: Bitwise OR operation (reg/ind/dir &#45;&gt; reg)." alt="" coords="36,805,139,835"/>
+<area shape="poly" id="edge16_Node000001_Node000017" title=" " alt="" coords="246,664,220,730,199,765,171,796,140,813,138,808,168,791,195,762,215,728,241,662"/>
+<area shape="rect" id="Node000018" href="$parser_8h.html#a5cbf9cd6a4a34567206c50a3c417a628" title="Parses a champion file and loads it into memory." alt="" coords="47,859,128,888"/>
+<area shape="poly" id="edge17_Node000001_Node000018" title=" " alt="" coords="251,664,243,705,229,755,205,805,190,828,171,849,152,862,130,870,128,865,149,857,168,845,186,825,201,802,224,753,238,704,245,663"/>
+<area shape="rect" id="Node000019" href="$parser_8h.html#a9393e0ab005767018939c8229af22117" title="Sets the program counter for all champions." alt="" coords="31,912,144,942"/>
+<area shape="poly" id="edge18_Node000001_Node000019" title=" " alt="" coords="254,664,249,715,236,778,212,844,194,875,171,902,146,919,143,914,168,898,189,872,207,842,231,777,243,714,248,663"/>
+<area shape="rect" id="Node000020" href="$opcode_8h.html#a1cd7d8e1901b4be666067fddafa436a5" title="st instruction: Stores a register value into memory (register/indirect)." alt="" coords="61,965,114,995"/>
+<area shape="poly" id="edge19_Node000001_Node000020" title=" " alt="" coords="255,664,254,724,243,802,233,843,218,883,198,921,171,955,145,973,115,981,114,975,142,968,168,952,193,919,213,881,227,841,238,801,248,724,250,664"/>
+<area shape="rect" id="Node000021" href="$opcode_8h.html#acd0a6997d0241cfb4cf189905ba5d1a2" title="sti instruction: Stores a register value with indirect addressing." alt="" coords="56,1019,119,1048"/>
+<area shape="poly" id="edge20_Node000001_Node000021" title=" " alt="" coords="251,664,242,744,226,846,203,944,188,982,172,1009,147,1025,120,1033,118,1028,145,1021,168,1005,184,979,198,942,221,845,237,743,246,663"/>
+<area shape="rect" id="Node000022" href="$opcode_8h.html#a30ccf3737de31fd4d29fed6e0a63bbe5" title="sub instruction: Subtracts two registers and stores the result." alt="" coords="66,1072,109,1102"/>
+<area shape="poly" id="edge21_Node000001_Node000022" title=" " alt="" coords="252,664,245,755,230,873,206,986,190,1031,172,1062,158,1073,142,1081,110,1088,109,1083,140,1076,155,1069,168,1058,185,1029,201,985,224,872,239,754,247,664"/>
+<area shape="rect" id="Node000023" href="$parser_8h.html#a2b70f226cef88f6a69984b888c772402" title="Writes champion programs into the arena memory." alt="" coords="5,1125,170,1155"/>
+<area shape="poly" id="edge22_Node000001_Node000023" title=" " alt="" coords="253,664,247,764,233,899,223,966,209,1028,192,1080,172,1115,158,1127,154,1123,168,1112,187,1077,204,1027,217,965,228,898,242,764,248,663"/>
+<area shape="rect" id="Node000024" href="$opcode_8h.html#a99fa7e954bc213357dd6aa4940bd6718" title="xor instruction: Bitwise XOR operation (reg/ind/dir &#45;&gt; reg)." alt="" coords="33,1179,142,1208"/>
+<area shape="poly" id="edge23_Node000001_Node000024" title=" " alt="" coords="254,664,249,775,236,925,226,1001,212,1071,194,1128,172,1169,159,1180,144,1187,141,1183,156,1175,168,1165,189,1126,207,1069,221,1000,231,925,244,775,248,664"/>
+<area shape="rect" id="Node000025" href="$opcode_8h.html#ab96f56197d82838e3e27a400a812e591" title="zjmp instruction: Conditional jump (if carry flag is set)." alt="" coords="58,1232,117,1262"/>
+<area shape="poly" id="edge24_Node000001_Node000025" title=" " alt="" coords="254,664,251,785,240,951,229,1035,215,1113,196,1177,185,1202,172,1222,146,1240,118,1247,116,1242,144,1235,168,1218,180,1200,191,1175,210,1112,224,1035,234,950,246,784,249,664"/>
+</map>

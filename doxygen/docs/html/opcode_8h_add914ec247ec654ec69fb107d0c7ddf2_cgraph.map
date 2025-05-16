@@ -1,0 +1,5 @@
+<map id="and_command" name="and_command">
+<area shape="rect" id="Node000001" title="and instruction: Bitwise AND operation (reg/ind/dir &#45;&gt; reg)." alt="" coords="5,5,117,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="165,5,235,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,18,149,18,149,23,117,23"/>
+</map>

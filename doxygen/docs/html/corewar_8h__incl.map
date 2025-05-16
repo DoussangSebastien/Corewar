@@ -1,0 +1,7 @@
+<map id="corewar.h" name="corewar.h">
+<area shape="rect" id="Node000001" title="Corewar virtual machine main header." alt="" coords="34,5,114,35"/>
+<area shape="rect" id="Node000002" href="$op_8h.html" title="Corewar operation definitions and VM constants." alt="" coords="5,83,55,113"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,37,48,71,44,68,63,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="78,83,158,113"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="85,34,104,68,100,71,80,37"/>
+</map>

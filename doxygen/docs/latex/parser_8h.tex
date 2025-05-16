@@ -1,0 +1,315 @@
+\doxysection{parser.\+h File Reference}
+\hypertarget{parser_8h}{}\label{parser_8h}\index{parser.h@{parser.h}}
+
+
+Corewar binary parser and memory allocation.  
+
+
+{\ttfamily \#include "{}corewar.\+h"{}}\newline
+Include dependency graph for parser.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{parser_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Represents a free memory area in the arena. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structnew__champ__t}{new\+\_\+champ\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Temporary storage for new champion parameters during parsing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{parser_8h_a502909699139bcf6dadb49798ce5aa1f}{check\+\_\+collisions}} (\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Checks for memory collisions between champions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{parser_8h_adea5c2c173c4d13c429459ba8d71f845}{free\+\_\+free\+\_\+areas}} (\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}free\+\_\+areas, int nb\+\_\+free\+\_\+areas)
+\begin{DoxyCompactList}\small\item\em Frees allocated \doxylink{structfree__area__t}{free\+\_\+area\+\_\+t} structures. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parser_8h_ab988a3140b0e5e0384b0c69baf936058}{get\+\_\+default\+\_\+corewar}} (void)
+\begin{DoxyCompactList}\small\item\em Creates a default initialized corewar state. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_acfb3e9550922a5e752712c53ab6f434d}{get\+\_\+total\+\_\+size}} (\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}process)
+\begin{DoxyCompactList}\small\item\em Calculates total size of all processes. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_a00c2ba1e06b4f2ddedf90d013aa569bd}{multiple\+\_\+free\+\_\+areas}} (\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}free\+\_\+areas, int nb\+\_\+free\+\_\+areas, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Handles memory allocation when multiple free areas exist. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_ae09715a196ea5219374dc22459d3da3a}{one\+\_\+free\+\_\+area}} (int total\+\_\+size, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Handles memory allocation when one free area exists. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_a5cbf9cd6a4a34567206c50a3c417a628}{parse\+\_\+file}} (char const \texorpdfstring{$\ast$}{*}filepath, \mbox{\hyperlink{structnew__champ__t}{new\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}new, \mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Parses a champion file and loads it into memory. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_a9393e0ab005767018939c8229af22117}{set\+\_\+champs\+\_\+pc}} (\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Sets the program counter for all champions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_ad73f96ac94c5e9ceece8786f81439f93}{sort\+\_\+free\+\_\+areas}} (\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}free\+\_\+areas, int lr\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Sorts free memory areas by size. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_afce9b99f75976c62134bb97fec8da498}{sort\+\_\+unset\+\_\+champs}} (\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}unset\+\_\+champs, int lr\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Sorts champions without assigned positions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{parser_8h_a2b70f226cef88f6a69984b888c772402}{write\+\_\+champs\+\_\+in\+\_\+arena}} (\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{corewar_8h_a09be1914520c3de0c22220a9f35e107f}{corewar}})
+\begin{DoxyCompactList}\small\item\em Writes champion programs into the arena memory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Corewar binary parser and memory allocation. 
+
+Handles champion loading, memory placement, and collision detection
+
+\begin{DoxyCopyright}{Copyright}
+EPITECH PROJECT, 2025 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{parser_8h_a502909699139bcf6dadb49798ce5aa1f}\index{parser.h@{parser.h}!check\_collisions@{check\_collisions}}
+\index{check\_collisions@{check\_collisions}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{check\_collisions()}{check\_collisions()}}
+{\footnotesize\ttfamily \label{parser_8h_a502909699139bcf6dadb49798ce5aa1f} 
+int check\+\_\+collisions (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Checks for memory collisions between champions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS if no collisions, FAILURE otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{parser_8h_a502909699139bcf6dadb49798ce5aa1f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_adea5c2c173c4d13c429459ba8d71f845}\index{parser.h@{parser.h}!free\_free\_areas@{free\_free\_areas}}
+\index{free\_free\_areas@{free\_free\_areas}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{free\_free\_areas()}{free\_free\_areas()}}
+{\footnotesize\ttfamily \label{parser_8h_adea5c2c173c4d13c429459ba8d71f845} 
+void free\+\_\+free\+\_\+areas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{free\+\_\+areas}{, }\item[{int}]{nb\+\_\+free\+\_\+areas}{}\end{DoxyParamCaption})}
+
+
+
+Frees allocated \doxylink{structfree__area__t}{free\+\_\+area\+\_\+t} structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em free\+\_\+areas} & Array of free areas to free \\
+\hline
+{\em nb\+\_\+free\+\_\+areas} & Number of free areas in the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{parser_8h_ab988a3140b0e5e0384b0c69baf936058}\index{parser.h@{parser.h}!get\_default\_corewar@{get\_default\_corewar}}
+\index{get\_default\_corewar@{get\_default\_corewar}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{get\_default\_corewar()}{get\_default\_corewar()}}
+{\footnotesize\ttfamily \label{parser_8h_ab988a3140b0e5e0384b0c69baf936058} 
+\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*} get\+\_\+default\+\_\+corewar (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates a default initialized corewar state. 
+
+\begin{DoxyReturn}{Returns}
+corewar\+\_\+t\texorpdfstring{$\ast$}{*} Newly allocated corewar state 
+\end{DoxyReturn}
+\Hypertarget{parser_8h_acfb3e9550922a5e752712c53ab6f434d}\index{parser.h@{parser.h}!get\_total\_size@{get\_total\_size}}
+\index{get\_total\_size@{get\_total\_size}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{get\_total\_size()}{get\_total\_size()}}
+{\footnotesize\ttfamily \label{parser_8h_acfb3e9550922a5e752712c53ab6f434d} 
+int get\+\_\+total\+\_\+size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdyna__process__t}{dyna\+\_\+process\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{process}{}\end{DoxyParamCaption})}
+
+
+
+Calculates total size of all processes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em process} & The process array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Total size in bytes 
+\end{DoxyReturn}
+\Hypertarget{parser_8h_a00c2ba1e06b4f2ddedf90d013aa569bd}\index{parser.h@{parser.h}!multiple\_free\_areas@{multiple\_free\_areas}}
+\index{multiple\_free\_areas@{multiple\_free\_areas}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{multiple\_free\_areas()}{multiple\_free\_areas()}}
+{\footnotesize\ttfamily \label{parser_8h_a00c2ba1e06b4f2ddedf90d013aa569bd} 
+int multiple\+\_\+free\+\_\+areas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{free\+\_\+areas}{, }\item[{int}]{nb\+\_\+free\+\_\+areas}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Handles memory allocation when multiple free areas exist. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em free\+\_\+areas} & Array of free memory areas \\
+\hline
+{\em nb\+\_\+free\+\_\+areas} & Number of free areas \\
+\hline
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{parser_8h_a00c2ba1e06b4f2ddedf90d013aa569bd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_ae09715a196ea5219374dc22459d3da3a}\index{parser.h@{parser.h}!one\_free\_area@{one\_free\_area}}
+\index{one\_free\_area@{one\_free\_area}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{one\_free\_area()}{one\_free\_area()}}
+{\footnotesize\ttfamily \label{parser_8h_ae09715a196ea5219374dc22459d3da3a} 
+int one\+\_\+free\+\_\+area (\begin{DoxyParamCaption}\item[{int}]{total\+\_\+size}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Handles memory allocation when one free area exists. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em total\+\_\+size} & Total size needed for all champions \\
+\hline
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{parser_8h_ae09715a196ea5219374dc22459d3da3a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_a5cbf9cd6a4a34567206c50a3c417a628}\index{parser.h@{parser.h}!parse\_file@{parse\_file}}
+\index{parse\_file@{parse\_file}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{parse\_file()}{parse\_file()}}
+{\footnotesize\ttfamily \label{parser_8h_a5cbf9cd6a4a34567206c50a3c417a628} 
+int parse\+\_\+file (\begin{DoxyParamCaption}\item[{char const \texorpdfstring{$\ast$}{*}}]{filepath}{, }\item[{\mbox{\hyperlink{structnew__champ__t}{new\+\_\+champ\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{new}{, }\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Parses a champion file and loads it into memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filepath} & Path to the champion file \\
+\hline
+{\em new} & Champion parameters structure \\
+\hline
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{parser_8h_a5cbf9cd6a4a34567206c50a3c417a628_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_a9393e0ab005767018939c8229af22117}\index{parser.h@{parser.h}!set\_champs\_pc@{set\_champs\_pc}}
+\index{set\_champs\_pc@{set\_champs\_pc}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{set\_champs\_pc()}{set\_champs\_pc()}}
+{\footnotesize\ttfamily \label{parser_8h_a9393e0ab005767018939c8229af22117} 
+int set\+\_\+champs\+\_\+pc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Sets the program counter for all champions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{parser_8h_a9393e0ab005767018939c8229af22117_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{parser_8h_ad73f96ac94c5e9ceece8786f81439f93}\index{parser.h@{parser.h}!sort\_free\_areas@{sort\_free\_areas}}
+\index{sort\_free\_areas@{sort\_free\_areas}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{sort\_free\_areas()}{sort\_free\_areas()}}
+{\footnotesize\ttfamily \label{parser_8h_ad73f96ac94c5e9ceece8786f81439f93} 
+int sort\+\_\+free\+\_\+areas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structfree__area__t}{free\+\_\+area\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{free\+\_\+areas}{, }\item[{int}]{lr}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Sorts free memory areas by size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em free\+\_\+areas} & Array of free areas to sort \\
+\hline
+{\em lr} & Left/right indices for the sort algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+\Hypertarget{parser_8h_afce9b99f75976c62134bb97fec8da498}\index{parser.h@{parser.h}!sort\_unset\_champs@{sort\_unset\_champs}}
+\index{sort\_unset\_champs@{sort\_unset\_champs}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{sort\_unset\_champs()}{sort\_unset\_champs()}}
+{\footnotesize\ttfamily \label{parser_8h_afce9b99f75976c62134bb97fec8da498} 
+int sort\+\_\+unset\+\_\+champs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structprocess__t}{process\+\_\+t}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{unset\+\_\+champs}{, }\item[{int}]{lr}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Sorts champions without assigned positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em unset\+\_\+champs} & Array of champions to sort \\
+\hline
+{\em lr} & Left/right indices for the sort algorithm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+\Hypertarget{parser_8h_a2b70f226cef88f6a69984b888c772402}\index{parser.h@{parser.h}!write\_champs\_in\_arena@{write\_champs\_in\_arena}}
+\index{write\_champs\_in\_arena@{write\_champs\_in\_arena}!parser.h@{parser.h}}
+\doxysubsubsection{\texorpdfstring{write\_champs\_in\_arena()}{write\_champs\_in\_arena()}}
+{\footnotesize\ttfamily \label{parser_8h_a2b70f226cef88f6a69984b888c772402} 
+int write\+\_\+champs\+\_\+in\+\_\+arena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcorewar__t}{corewar\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{corewar}{}\end{DoxyParamCaption})}
+
+
+
+Writes champion programs into the arena memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em corewar} & The corewar virtual machine state \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SUCCESS on success, FAILURE on error 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{parser_8h_a2b70f226cef88f6a69984b888c772402_cgraph}
+\end{center}
+\end{figure}

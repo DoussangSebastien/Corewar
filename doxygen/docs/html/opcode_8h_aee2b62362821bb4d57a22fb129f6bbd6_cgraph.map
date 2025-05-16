@@ -1,0 +1,5 @@
+<map id="aff" name="aff">
+<area shape="rect" id="Node000001" title="aff instruction: Displays a character from a register." alt="" coords="5,5,44,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="92,5,162,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,18,76,18,76,23,44,23"/>
+</map>

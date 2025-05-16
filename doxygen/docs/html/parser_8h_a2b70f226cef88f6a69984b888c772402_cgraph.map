@@ -1,0 +1,5 @@
+<map id="write_champs_in_arena" name="write_champs_in_arena">
+<area shape="rect" id="Node000001" title="Writes champion programs into the arena memory." alt="" coords="5,5,170,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="218,5,288,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="170,18,202,18,202,23,170,23"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="live" name="live">
+<area shape="rect" id="Node000001" title="live instruction: Marks a champion as alive." alt="" coords="5,5,48,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="96,5,166,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="48,18,80,18,80,23,48,23"/>
+</map>

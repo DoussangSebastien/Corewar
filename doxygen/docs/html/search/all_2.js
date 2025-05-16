@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['carry_0',['carry',['../structprocess__t.html#a87e960a6367a99312e26531e33a571c0',1,'process_t']]],
+  ['champ_5ft_1',['champ_t',['../structchamp__t.html',1,'']]],
+  ['champs_2',['champs',['../structdyna__champ__t.html#ae89906911d71d7211dd4ee6f1a42e60a',1,'dyna_champ_t::champs'],['../structcorewar__t.html#ae35cfad11076ffb29533353614e658e3',1,'corewar_t::champs'],['../structfree__area__t.html#ad05452ee804fed2e51a7bb6c05b0b1d2',1,'free_area_t::champs']]],
+  ['check_5fcollisions_3',['check_collisions',['../parser_8h.html#a502909699139bcf6dadb49798ce5aa1f',1,'parser.h']]],
+  ['code_4',['code',['../structop__s.html#a09710d11b050cd5090fe27eeb9a176bd',1,'op_s']]],
+  ['command_5fcycle_5',['command_cycle',['../structprocess__t.html#a04ef9720de85f168a8ccb0752bee664c',1,'process_t']]],
+  ['comment_6',['comment',['../structchamp__t.html#ac740537f4da62715ab29c98bfb02a1ba',1,'champ_t::comment'],['../structop__s.html#acbbd7859ed019b3925d0043843790cc8',1,'op_s::comment'],['../structheader__s.html#ae432ef050d119d31270ec31f413f8372',1,'header_s::comment']]],
+  ['comment_5fchar_7',['COMMENT_CHAR',['../op_8h.html#aefd3055a62be1d53ea09e84ab6548d0a',1,'op.h']]],
+  ['comment_5fcmd_5fstring_8',['COMMENT_CMD_STRING',['../op_8h.html#a903216682d110c839f2ae53ce7f7a815',1,'op.h']]],
+  ['comment_5flength_9',['COMMENT_LENGTH',['../op_8h.html#a31a10f5d8e8f9085ce0224cf043cb5fa',1,'op.h']]],
+  ['corewar_10',['corewar',['../corewar_8h.html#a09be1914520c3de0c22220a9f35e107f',1,'corewar.h']]],
+  ['corewar_2eh_11',['corewar.h',['../corewar_8h.html',1,'']]],
+  ['corewar_5fexec_5fmagic_12',['COREWAR_EXEC_MAGIC',['../op_8h.html#aa13425afc62cf7a8ca3546ac3046b804',1,'op.h']]],
+  ['corewar_5ft_13',['corewar_t',['../structcorewar__t.html',1,'']]],
+  ['cycle_14',['cycle',['../structcorewar__t.html#ae28758359bd9466046e4ca14abd0ed9d',1,'corewar_t']]],
+  ['cycle_5fdelta_15',['CYCLE_DELTA',['../op_8h.html#a928a2f68c987f23790697b0b7cce9ade',1,'op.h']]],
+  ['cycle_5fto_5fdie_16',['CYCLE_TO_DIE',['../op_8h.html#a185b5fb4b0b4371b9ef908ac34024d9b',1,'op.h']]],
+  ['cycle_5fto_5fdie_17',['cycle_to_die',['../structcorewar__t.html#a5fa9e174c0f5ca76fb256410b8d96cf2',1,'corewar_t']]]
+];

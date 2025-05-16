@@ -1,0 +1,5 @@
+<map id="set_champs_pc" name="set_champs_pc">
+<area shape="rect" id="Node000001" title="Sets the program counter for all champions." alt="" coords="5,5,119,35"/>
+<area shape="rect" id="Node000002" href="$corewar_8h.html#a09be1914520c3de0c22220a9f35e107f" title="Main Corewar execution function." alt="" coords="167,5,237,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,18,151,18,151,23,119,23"/>
+</map>
